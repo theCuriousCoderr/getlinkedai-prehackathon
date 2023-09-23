@@ -66,28 +66,28 @@ function Contact() {
         </header>
 
         <div className='z-20 relative'>
-            <div className='text-getlinkedai_fuchsia text-xl font-bold mt-2 text-left'>
+            <div className='text-getlinkedai_fuchsia text-xl font-semibold mt-2 text-left'>
                 <p>Questions or need assistance?</p>
                 <p>Let us know about it</p>
             </div>
-            <p className='text-sm text-white font-medium my-5'>Email us below to any question related to our event</p>
+            <p className='text-sm text-white font-normal my-5'>Email us below to any question related to our event</p>
             <form onSubmit={handleSubmit} className='space-y-8 mt-8'>
                 <div>
-                    <input required type="text" name="email" value={contactData.email} onChange={handleChange} placeholder="Email" className='text-lg w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 px-6 py-6 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-lg' />
+                    <input required type="text" name="email" value={contactData.email} onChange={handleChange} placeholder="Email" className='text-lg w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 px-6 py-6 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-lg' />
                 </div>
                 <div>
-                    <input required type="text" name="first_name" value={contactData.first_name} onChange={handleChange} placeholder="Team's name" className='text-lg w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 px-6 py-6 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-lg' />
+                    <input required type="text" name="first_name" value={contactData.first_name} onChange={handleChange} placeholder="Team's name" className='text-lg w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 px-6 py-6 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-lg' />
                 </div>
                 <div>
-                    <textarea required type="text" name="message" value={contactData.message} onChange={handleChange} placeholder="Message" className='text-lg w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-40 px-6 pt-3 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-lg' />
+                    <textarea required type="text" name="message" value={contactData.message} onChange={handleChange} placeholder="Message" className='text-lg w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-40 px-6 pt-3 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-lg' />
                 </div>
                 <div className='w-3/5 mx-auto'>
-                    <button type="submit" className='w-full h-12 text-gray-50 font-semibold rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple '>Submit</button>
+                    <button type="submit" className='w-full h-12 text-gray-50 font-normal rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple '>Submit</button>
                 </div>
             </form>
 
             <div className='text-center mt-10'>
-                <p className='text-getlinkedai_fuchsia font-semibold text-sm'>Share on</p>
+                <p className='text-getlinkedai_fuchsia font-normal text-sm'>Share on</p>
                 <div className="flex justify-center gap-3 bg-red-20 mt-1">
                     <div className="w-5 h-5">
                         <img src={instagram} className="w-full h-full"/>

@@ -171,7 +171,7 @@ function Register() {
                     <p className='text-getlinkedai_fuchsia font-bold text-4xl hidden lg:block'>Register</p>
                     <div className='my-3'>
                         <div className='flex justify-between bg-red-20 lg:justify-start'>
-                            <p className='text-gray-50 font-medium text-[.9rem] bg-red-20 mt-3 w-[75%] lg:w-auto'>Be part of this movement!</p>
+                            <p className='text-gray-50 font-normal text-[.9rem] bg-red-20 mt-3 w-[75%] lg:w-auto'>Be part of this movement!</p>
                             <div className='w-[25%] mt-1 bg-red-20 lg:w-[15%]'>
                                 <div className='flex w-full justify-center bg-red-30 border-b-[1.59px] border-dashed border-getlinkedai_fuchsia'>
                                     <div>
@@ -183,7 +183,7 @@ function Register() {
                                 </div>
                             </div>
                         </div>
-                        <div className='relative text-gray-50 flex justify-between text-[1.4rem] font-semibold lg:justify-start lg:gap-3'>
+                        <div className='relative text-gray-50 flex justify-between text-[1.4rem] font-normal lg:justify-start lg:gap-3'>
                             <p>CREATE</p>
                             <p>YOUR</p>
                             <p>ACCOUNT</p>
@@ -198,22 +198,22 @@ function Register() {
                             <div className='space-y-4 lg:flex lg:justify-between bg-red-20'>
                                  <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='team_name' className='text-white'>Team's Name</label>
-                                    <input required type="text" name="team_name" value={registerData.team_name} onChange={handleChange} placeholder='Enter the name of your group' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="team_name" value={registerData.team_name} onChange={handleChange} placeholder='Enter the name of your group' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                                 <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='phone_number' className='text-white'>Phone</label>
-                                    <input required type="text" name="phone_number" value={registerData.phone_number} onChange={handleChange} placeholder='Enter your phone number' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="phone_number" value={registerData.phone_number} onChange={handleChange} placeholder='Enter your phone number' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                             </div>
 
                             <div className='space-y-4 lg:flex lg:justify-between bg-red-20'>
                                 <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='email' className='text-white'>Email</label>
-                                    <input required type="text" name="email"value={registerData.email} onChange={handleChange} placeholder='Enter your email addres' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="email"value={registerData.email} onChange={handleChange} placeholder='Enter your email addres' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                                 <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='project_topic' className='text-white'>Project Topic</label>
-                                    <input required type="text" name="project_topic" value={registerData.project_topic} onChange={handleChange} placeholder='What is your group project topic' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="project_topic" value={registerData.project_topic} onChange={handleChange} placeholder='What is your group project topic' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                             </div>
                            
@@ -251,8 +251,8 @@ function Register() {
                         <div className='bg-red-20 w-3/5  mx-auto mt-7 lg:w-full'>
                             {
                                 registerData.privacy_poclicy_accepted ? 
-                                <button type="submit" className='w-full h-12 text-gray-50 font-semibold rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple '>Submit</button>
-                                :  <button disabled type="submit" className='w-full h-12 text-gray-50 font-semibold rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple opacity-50 hover:cursor-not-allowed '>Submit</button>
+                                <button type="submit" className='w-full h-12 text-gray-50 font-normal rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple '>Submit</button>
+                                :  <button disabled type="submit" className='w-full h-12 text-gray-50 font-normal rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple opacity-50 hover:cursor-not-allowed '>Submit</button>
                             }
                         </div>
                     </form>
