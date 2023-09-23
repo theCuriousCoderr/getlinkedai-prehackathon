@@ -7,11 +7,13 @@ import left_purple_lens_flare from '../images/left_Purple-Lens-Flare.png';
 import successful from '../images/successful.png';
 import successful_man from '../images/successful_man.png';
 import wink from '../images/wink.png';
+import gray_star_3x from '../images/gray_star_3x.png';
+import gra_star_3x from '../images/gra_star_3x.png';
+import purple_star_3x from '../images/purple_star_3x.png';
 
 
 function Register() {
     const [success, setSuccess] = useState(false);
-    // const [policy, setPolicy] = useState(false);
     const [categoryList, setCategoryList] = useState([]);
     const [registerData, setRegisterData] = useState({
         "email":"",
@@ -64,7 +66,7 @@ function Register() {
         })
         let data = await response.json();
         if (data.id) {
-            alert(`REGISTRATION SUCCESSFUL.\n Your Id Number is ${data.id}. `);
+            alert(`REGISTRATION SUCCESSFUL.\n Your Registration Id Number is ${data.id}. `);
             setSuccess(true);
         } else {
             alert(data.email[0].toUpperCase())
@@ -74,7 +76,7 @@ function Register() {
     
 
   return (
-    <div className='relative w-full bg-getlinkedai_bg pb-[10rem] '>
+    <div className='relative w-full bg-getlinkedai_bg pb-[1rem] '>
         { success && 
         <div>
         {/* background */}
@@ -82,8 +84,17 @@ function Register() {
 
         <div className='relative z-10'>
             <div className='relative bg-red-20'>
-                <div className='absolute w-[80%] h-[70vh] right-[10%] top-[16vh]  border-2 border-getlinkedai_fuchsia rounded lg:w-[45%] lg:right-[25%]'></div>
+                <div className='absolute w-[80%] h-[70vh] right-[10%] top-[16vh]  border border-getlinkedai_fuchsia rounded lg:w-[45%] lg:right-[25%]'></div>
                 <div className='absolute top-[18vh] left-[10%] w-[80%] bg-red-20 px-5 lg:w-[45%] lg:left-[30%]'>
+                    <div className='absolute w-3 -top-10 right-0'>
+                        <img src={purple_star_3x} className='w-full h-full' />
+                    </div>
+                    <div className='absolute w-4 top-[35%] left-[10%]'>
+                        <img src={gray_star_3x} className='w-full h-full' />
+                    </div>
+                    <div className='absolute w-3 -bottom-[12%] right-[5%]'>
+                        <img src={gra_star_3x} className='w-full h-full' />
+                    </div>
                     {/* success */}
                     <div className='relative w-full bg-yellow-20 mt-2'>
                         <div className='relative w-2/3 ml-[8%] bg-red-40 lg:ml-[25%]'>
@@ -98,7 +109,7 @@ function Register() {
                     <div className='space-y-6 mt-10'>
                         <div className='text-gray-50 font-medium tex-center text-xl mt-5'>
                             <p className='text-center'>Congratulations</p>
-                            <p className='text-center'>you have successfully registered</p>
+                            <p className='text-center'>you have successfully Registered!</p>
                         </div>
                         <div className='relative text-gray-300 font-medium text-center text-sm'>
                             <p>Yes, it was easy and you did it!</p>
@@ -110,7 +121,6 @@ function Register() {
                         <div>
                             <button className='w-full h-14 rounded-md text-white font-semibold text-lg bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple'>
                                 <NavLink to="/" className="bg-blue-20 px-24 py-4">Back</NavLink>
-                                {/* Back */}
                             </button>
                         </div>
                     </div>
@@ -122,8 +132,9 @@ function Register() {
          <div className='absolute left-0 top-12 '>
             <img src={left_purple_lens_flare} />
         </div>
-        <header className="bg-getlinkedai_bg px-10 py-7 align-middle flex justify-between border-b border-gray-800
-			lg:px-20 lg:py-5 ">
+       
+        <header className="hidden bg-getlinkedai_bg px-10 py-7 align-middle lg:flex justify-between border-b border-gray-800
+			lg:px-20 lg:py-5">
             <div>
                 <span className="text-white text-[15px] font-bold font-['Clash Display'] lg:text-3xl">get</span>
                 <span className="text-fuchsia-500 text-[15px] font-bold font-['Clash Display'] lg:text-3xl">linked</span>
@@ -142,19 +153,22 @@ function Register() {
                 </li>
             </ul>
         </header>
-        <div className='relative w-[70%] mx-auto py-5 bg-red-10 lg:flex lg:w-[90%] lg:justify-evenly lg:py-0  lg:h-[80vh lg:top-[10vh]'>
+        <div className='relative w-[70%] mx-auto py-7 bg-red-10 lg:flex lg:w-[90%] lg:justify-evenly lg:py-0  lg:h-[80vh lg:top-[10vh]'>
             <p className='text-getlinkedai_fuchsia font-bold text-lg lg:hidden'>Register</p>
 
             <div className='lg:w-[40%] bg-red-20 lg:mt-[7%]'>
-                <div className='bg-red-20 w-56 mx-auto mt-8 lg:w-full lg:h-[70%]'>
+                <div className='relative bg-red-20 w-56 mx-auto mt-8 lg:w-full lg:h-[70%]'>
                     <img src={designer} className='w-full h-full' />
+                    <div className='absolute w-4 bottom-[35%] -right-[10%]'>
+                        <img src={gra_star_3x} />
+                    </div>
                 </div>
             </div>
             
 
             <div className='relative lg:w-[60%] lg:h-full lg:bg-[rgba(255,255,255,0.03)] lg:p-10'>
                 <div>
-                    <p className='text-getlinkedai_fuchsia font-bold text-4xl'>Register</p>
+                    <p className='text-getlinkedai_fuchsia font-bold text-4xl hidden lg:block'>Register</p>
                     <div className='my-3'>
                         <div className='flex justify-between bg-red-20 lg:justify-start'>
                             <p className='text-gray-50 font-medium text-[.9rem] bg-red-20 mt-3 w-[75%] lg:w-auto'>Be part of this movement!</p>
@@ -176,27 +190,30 @@ function Register() {
                         </div>
                     </div>
 
-                    <form onSubmit={handleSubmit} className='mt-5'>
+                    <form onSubmit={handleSubmit} className='relative mt-5'>
+                        <div className='absolute w-4 top-5 -left-[12%]'>
+                            <img src={gray_star_3x} className='w-full h-full' />
+                        </div>
                         <div className='space-y-4'>
-                            <div className='lg:flex lg:justify-between bg-red-20'>
+                            <div className='space-y-4 lg:flex lg:justify-between bg-red-20'>
                                  <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='team_name' className='text-white'>Team's Name</label>
-                                    <input required type="text" name="team_name" value={registerData.team_name} onChange={handleChange} placeholder='Enter the name of your group' className='w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="team_name" value={registerData.team_name} onChange={handleChange} placeholder='Enter the name of your group' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                                 <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='phone_number' className='text-white'>Phone</label>
-                                    <input required type="text" name="phone_number" value={registerData.phone_number} onChange={handleChange} placeholder='Enter your phone number' className='w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="phone_number" value={registerData.phone_number} onChange={handleChange} placeholder='Enter your phone number' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                             </div>
 
-                            <div className='lg:flex lg:justify-between bg-red-20'>
+                            <div className='space-y-4 lg:flex lg:justify-between bg-red-20'>
                                 <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='email' className='text-white'>Email</label>
-                                    <input required type="text" name="email"value={registerData.email} onChange={handleChange} placeholder='Enter your email addres' className='w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="email"value={registerData.email} onChange={handleChange} placeholder='Enter your email addres' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                                 <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='project_topic' className='text-white'>Project Topic</label>
-                                    <input required type="text" name="project_topic" value={registerData.project_topic} onChange={handleChange} placeholder='What is your group project topic' className='w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                    <input required type="text" name="project_topic" value={registerData.project_topic} onChange={handleChange} placeholder='What is your group project topic' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
                             </div>
                            
@@ -205,21 +222,24 @@ function Register() {
                                 <div className='w-[65%] lg:w-[48%]'>
                                     <div className='space-y-1'>
                                         <label htmlFor='category' className='text-white'>Category</label>
-                                        <select required name="category" value={registerData.category} onChange={handleChange}  className='w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 py-2 px-1 font-semibold text-gray-50'>
+                                        <select required name="category" value={registerData.category} onChange={handleChange}  className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 py-2 px-1 font-semibold text-gray-50'>
                                             <option selected={true} disabled value="all">Select your category</option>
                                             {categoryList.map(items => <option key={items.name} value={items.name} className='text-gray-950 medium'>{items.name}</option>)}
                                         </select>
                                     </div>
                                 </div>
-                                <div className='w-[30%] lg:w-[48%]'>
+                                <div className='relative w-[30%] lg:w-[48%]'>
+                                    <div className='absolute w-[.7rem] top-0 -right-[20%]'>
+                                        <img src={purple_star_3x} className='w-full h-full' />
+                                    </div>
                                     <div className='space-y-1'>
                                         <label htmlFor='group_size' className='text-white text-[.9rem]'>Group Size</label>
-                                        <input required type="number" name="group_size" value={registerData.group_size} onChange={handleChange} placeholder='Select' className='w-full bg-[rgba(255,255,255,0.03)] border-2 border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
+                                        <input required type="number" name="group_size" value={registerData.group_size} onChange={handleChange} placeholder='Select' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-semibold text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p className='text-getlinkedai_fuchsia italic text-[.67rem] text-center font-light my-4 lg:text-left lg:text-base'>Please review your registration details before submitting</p>
+                        <p className='text-pink-400 italic text-[.67rem] text-center font-light my-5 lg:text-left lg:text-base'>Please review your registration details before submitting</p>
 
                         <div className='flex gap-3'>
                             <div className='bg-red-20'>

@@ -19,6 +19,7 @@ import the_big_idea from '../images/the_big_idea.png';
 import spiral_arrow from '../images/spiral_arrow.png';
 import purple_star from '../images/purple_star.png';
 import purple_star_3x from '../images/purple_star_3x.png';
+import gra_star_3x from '../images/gra_star_3x.png';
 import sitting_woman from '../images/sitting_woman.png';
 import pie_chart from '../images/pie_chart.png';
 import add from '../images/add.png';
@@ -31,6 +32,7 @@ import bronze_medal from '../images/bronze_medal.png';
 import liberty from '../images/liberty.png';
 import liberty_company from '../images/liberty_company.png';
 import white_crown from '../images/white_crown.png';
+import paybox from '../images/paybox.png';
 import whisper_logo from '../images/whisper_logo.png';
 import check_terms from '../images/check_terms.png';
 import man_lock from '../images/man_lock.png';
@@ -202,11 +204,11 @@ function Home() {
 							</button>
 						</div>
 
-						<div className="w-[60%] mx-auto bg-red-20 flex justify-between bg-red-20 lg:mx-0 lg:w-1/3 lg:mt-16">
-							<div className="flex gap-">
+						<div className="w-[60%] mx-auto bg-red-20 flex justify-between bg-red-20 font-medium lg:mx-0 lg:w-1/3 lg:mt-16">
+							<div className="flex gap-1">
 								<div className="relative text-gray-50 text-4xl flex gap-1 bg-red-20">
-									<p>0</p>
-									<p>0</p>
+									<p className="sofia">0</p>
+									<p className="sofia">0</p>
 									<div className="absolute -bottom-2 -right-4 text-gray-50 text-[.9rem]">
 										<p>H</p>
 									</div>
@@ -214,8 +216,8 @@ function Home() {
 							</div>
 							<div className="flex gap-1">
 								<div className="relative text-gray-50 text-4xl flex gap-1 bg-red-20">
-									<p>0</p>
-									<p>0</p>
+									<p className="sofia">0</p>
+									<p className="sofia">0</p>
 									<div className="absolute  -bottom-2 -right-4 text-gray-50 text-[.9rem]">
 										<p>M</p>
 									</div>
@@ -223,8 +225,8 @@ function Home() {
 							</div>
 							<div className="flex gap-1">
 								<div className="relative text-gray-50 text-4xl flex gap-1 bg-red-20">
-									<p>0</p>
-									<p>0</p>
+									<p className="sofia">0</p>
+									<p className="sofia">0</p>
 									<div className="absolute  -bottom-2 -right-3 text-gray-50 text-[.9rem]">
 										<p>S</p>
 									</div>
@@ -298,7 +300,7 @@ function Home() {
 					<div className="absolute top-48 right-0">
 						<img src={right_purple_lens_flare}  />
 					</div>
-					<div className="relative w-[80%] mx-auto text-center py-16 bg-red-30 lg:flex lg:flex-row-reverse lg:justify-between lg:pt-16 lg:pb-12">
+					<div className="relative z-10 w-[80%] mx-auto text-center py-16 bg-red-30 lg:flex lg:flex-row-reverse lg:justify-between lg:pt-16 lg:pb-12">
 						<div className="bg-red-30 flex justify-center relative bg-red-40 w-full lg:w-[40%]">
 							<div className="bg-blue-40 -mt-12 w-full">
 								<img src={sitting_woman} className="w-full h-full" />
@@ -323,8 +325,8 @@ function Home() {
 								<div className="absolute w-3 h-4 -right-2 -top-4">
 									<img src={gray_star_3x} className="w-full h-full" />
 								</div>
-								<div className="absolute -bottom-7 left-[20%]">
-									<img src={white_star_3x} className="w-3 h-3"/>
+								<div className="absolute w-3 -bottom-9 left-[20%]">
+									<img src={white_star_3x} className="w-full h-full"/>
 								</div>
 							</div>
 							
@@ -356,8 +358,8 @@ function Home() {
 								<div className="relative lg:w-full lg:h-full">
 									<img src={pie_chart} className="w-full h-full"/>
 								</div>
-								<div className="absolute top-[52%] left-[56%]">
-									<img src={gray_star_3x} className="w-3 h-3"  />
+								<div className="absolute w-3 top-[52%] left-[56%]">
+									<img src={gray_star_3x} className="w-full h-full"  />
 								</div>
 							</div>
 						</div>
@@ -376,7 +378,7 @@ function Home() {
 										judingCriteria.map(items => {
 											return (
 												<div key={items.title} className="text-center lg:text-left">
-													<span className="text-pink-500 font-bold text-[.9rem]">{items.title}</span>
+													<span className="text-[rgba(255,38,185,1)] font-bold text-[1rem]">{items.title}</span>
 													<span className="text-white font-medium text-[.9rem] ml-1 leading-7">{items.content}</span>
 												</div>
 											)
@@ -413,7 +415,7 @@ function Home() {
 							<div className="space-y-5 mt-12">
 								{ FAQs.map(items => 
 										<button key={items} className="relative w-full flex flex-wrap justify-between bg-red-20 pb-1 border-b-2 border-fuchsia-500">
-											<p className="text-[.9rem] font-medium text-gray-50 w-[90%] bg-red-40 text-left">{items}</p>
+											<p className="text-[.9rem] font-medium text-gray-50 w-[88%] bg-red-40 text-left">{items}</p>
 											<div className="w-1/ bg-blue-30 absolute bottom-4 right-0">
 												<img src={add} className="w-3 h-3" />
 											</div>
@@ -482,14 +484,14 @@ function Home() {
 						</div>
 
 						<ul className="relative w-full space-y-7 mt-14 bg-red-10">
-							<div className="absolute w-3 -top-10 left-[15%]">
-								<img src={purple_star_3x} className="w-5 h-4" />
+							<div className="absolute w-4 -top-10 left-[15%]">
+								<img src={purple_star_3x} className="w-full h-full" />
 							</div>
 							<div className="absolute w-3 top-[23rem] right-[10%]">
 								<img src={white_star_3x} className="w-3 h-3" />
 							</div>
-							<div className="absolute w-3 -bottom-8 -left-5">
-								<img src={gray_star_3x} className="w-4 h-3" />
+							<div className="absolute w-4 -bottom-8 -left-5">
+								<img src={gray_star_3x} className="w-full h-full" />
 							</div>
 							{ timeline.map((items, index ) => {
 								return (
@@ -514,16 +516,31 @@ function Home() {
 					
 					<div className="relative w-[80%] mx-auto text-center py-10  lg:w-full lg:pb-20">
 						<div className="relative bg-red-20 lg:w-[40%] lg:float-right lg:text-left lg:mr-[10%]">
+							<div className="absolute w-2">
+								<img src={gra_star_3x} className="w-full h-full" />
+							</div>
+							<div className="absolute w-2 right-[20%] top-[20%]">
+								<img src={gra_star_3x} className="w-full h-full" />
+							</div>
 							<p className="text-xl font-bold text-gray-100 lg:text-3xl lg:font-extrabold">Prizes and</p>
 							<p className="text-getlinkedai_fuchsia font-semibold text-xl lg:text-3xl lg:font-extrabold">Rewards</p>
 							<p className="text-gray-50 leading-7 mt-1 font-sans text-[.9rem] font-medium lg:text-lg">Highlight of the prizes or rewards for winners and for participants.</p>
 						</div>
 
 						<div className="relative lg:flex lg:flex-wrap lg:justify-evenly lg:w-full bg-blue-20 lg:mt-64">
-							<div className="mt-10 lg:w-[35%] lg:h-full bg-red-40 lg:-mt-32">
+							<div className="relative mt-10 lg:w-[35%] lg:h-full bg-red-40 lg:-mt-32">
+								<div className="absolute w-3 bottom-0 left-5">
+									<img src={white_star_3x} className="w-full h-full" />
+								</div>
 								<img src={trophy_cup} className="w-full h-full " />
 							</div>
 							<div className="relative bg-yellow-40 flex flex-wrap justify-between h-36 mt-28 lg:w-[50%] lg:mt-24">
+								<div className="absolute w-3 right-0 -top-[50%]">
+									<img src={white_star_3x} className="w-full h-full" />
+								</div>
+								<div className="absolute w-3 right-[30%] -bottom-[15%]">
+									<img src={gray_star_3x} className="w-full h-full" />
+								</div>
 								{/* silver medal */}
 								<div className="bg-blue-40 relative w-[30%] h-[90%] bg-[rgba(212,52,254,0.12)] border-2 border-getlinkedai_fuchsia rounded lg:h-52">
 									<div className="relative ">
@@ -580,38 +597,44 @@ function Home() {
 
 				{/* partners */}
 				<div className="relative w-full bg-getlinkedai_bg">
-					<div className="absolute -left-20 -top-28">
+					<div className="absolute  -left-20 -top-28">
 						<img src={left_purple_lens_flare} />
 					</div>
-					<div className="relative w-[80%] mx-auto text-center pt-10 pb-28 bg-red-30">
+					<div className="relative z-10 w-[80%] mx-auto text-center pt-10 pb-28 bg-red-30">
 						<div>
 							<p className="text-xl font-bold text-gray-100 lg:font-extrabold lg:text-3xl">Partners and Sponsors</p>
 							{/* <p className="text-getlinkedai_fuchsia font-semibold text-xl">Rewards</p> */}
-							<p className="text-gray-50 leading-7 mt-1 font-sans text-[.9rem] font-medium">Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
+							<p className="text-gray-50 leading-5 mt-1 font-sans text-[.8rem] font-medium">Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
 						</div>
 
-						<div className="p-5 bg-[rgba(212,52,254,0.12) border-2 border-getlinkedai_fuchsia rounded lg:p-24">
+						<div className="relative py-6 px-12 bg-[rgba(255, 255, 255, 0.01)] border-2 border-getlinkedai_fuchsia mt-10 rounded lg:p-24">
+							<div className="absolute w-2 top-1 left-[5%]">
+								<img src={purple_star_3x} className="w-full h-full" />
+							</div>
+							<div className="absolute w-2 bottom-1 right-[10%]">
+								<img src={white_star_3x} className="w-full h-full" />
+							</div>
 							<div className="flex flex-col w-full bg-red-20 ">
 								{/* top row */}
-								<div className="flex flex-wrap justify-between bg-red-300">
-									<div className="relative w-[25%] h-10 bg-red-30 lg:h-auto">
+								<div className="flex flex-wrap justify-between bg-red-30 h-7">
+									<div className="relative w-[25%] h-full bg-red-30 lg:h-auto">
 										<div className="flex flex-wrap justify-center">
-											<div className="absolute bg-blue-40 w-[60%] mx-auto">
-												<img src={liberty} className="" />
+											<div className="absolute bg-blue-40 h-full w-[60%] mx-auto">
+												<img src={liberty} className="w-full h-full" />
 											</div>
 										</div>
 									</div>
-									<div className="relative w-[40%] h-10 border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
+									<div className="relative w-[40%] h- border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
 										<div className="flex flex-wrap justify-center mt-3">
-											<div className="absolute bg-blue-40 w-[70%] mx-auto">
-												<img src={liberty_company}  />
+											<div className="absolute bottom-3 bg-blue-40 w-[70%] mx-auto">
+												<img src={liberty_company} className="w-full h-full"  />
 											</div>
 										</div>
 									</div>
-									<div className="w-[25%] h-10 bg-red-30">
-										<div className="relative flex flex-wrap justify-center">
-											<div className="absolute bg-blue-40 w-[60%] mx-auto mt-1">
-												<img src={white_crown} className="" />
+									<div className="relative w-[25%] h-full bg-red-30 lg:h-auto">
+										<div className="flex flex-wrap justify-center">
+											<div className="absolute bg-blue-40 bottom-1 w-[60%] mx-auto">
+												<img src={white_crown} className="w-full h-full" />
 											</div>
 										</div>
 									</div>
@@ -625,26 +648,26 @@ function Home() {
 									<div className="w-[27%] h-[16%] bg-getlinkedai_fuchsia mt-1"></div>
 								</div>
 								{/* bottom row */}
-								<div className="flex flex-wrap justify-between">
-									<div className="relative w-[25%] h-10 bg-red-30">
-										<div className="flex flex-wrap justify-center">
-											<div className="absolute bg-blue-40 w-[70%] mx-auto mt-1 ml-2">
-												<img src={whisper_logo} />
-											</div>
-										</div>
-									</div>
-									<div className="w-[40%] h-10 border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
+								<div className="flex flex-wrap justify-between bg-red-20 h-7">
+									<div className="relative w-[25%] h- bg-red-30">
 										<div className="flex flex-wrap justify-center">
 											<div className="absolute bg-blue-40 w-[60%] mx-auto mt-1 ml-2">
-												<span>Pay</span><span>box</span>
+												<img src={whisper_logo}  className="w-full h-full" />
 											</div>
 										</div>
 									</div>
-									<div className="w-[25%] h-10 bg-red-30">
+									<div className="relative w-[40%] h- border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
+										<div className="flex flex-wrap justify-center mt-3">
+											<div className="absolute top-0 bg-blue-40 w-[70%] mx-auto">
+												<img src={paybox} className="w-full h-full"  />
+											</div>
+										</div>
+									</div>
+									<div className="w-[25%] h- bg-red-30">
 										<div className="relative">
-											<div className="relative text-[.8rem] bg-blue-20 mt-1">
+											<div className="relative text-[.5rem] bg-blue-20 mt-1">
 												<span className="text-white">Vuzual</span><span className="text-red-600 ml-1 font-bold">Plus</span>
-												<div className="absolute -bottom-3 -right-2 text-[.4rem] text-gray-50 font-medium">
+												<div className="absolute -bottom-1 -right-2 text-[.2rem] text-gray-50 font-medium">
 													<p>Design Studios</p>
 												</div>
 											</div>
@@ -659,16 +682,19 @@ function Home() {
 					</div>
 				</div>
 
-				<hr className="border-gray-600" />
+				<hr className="relative z-20 border-gray-400" />
 
 				{/* privacy policy */}
 				<div className="relative w-full bg-[rgba(20, 13, 39)]">
 					<div className="absolute right-0 -top-52">
 						<img src={right_purple_lens_flare} />
 					</div>
-					<div className="relative w-[80%] mx-auto text-center pt-10 pb-48 bg-red-30 lg:flex">
+					<div className="relative w-[80%] mx-auto text-center pt-16 pb-48 bg-red-30 lg:flex">
 						<div className="lg:w-[50%]">
-							<div className="lg:text-left">
+							<div className="relative lg:text-left">
+								<div className="absolute w-3 right-[20%] -top-[15%]">
+									<img src={gray_star_3x} className="w-full h-full"/>
+								</div>
 								<p className="text-xl font-bold text-gray-100 lg:font-extrabold lg:text-3xl">Privacy Policy and</p>
 								<p className="text-getlinkedai_fuchsia font-semibold text-xl lg:font-extrabold lg:text-3xl">Terms</p>
 								<p className="text-gray-300 leading-7 mt-1 font-sans text-[.9rem] font-medium">Last updated on September 12, 2023</p>
@@ -680,10 +706,12 @@ function Home() {
 								<div className="absolute -left-36 bottom-0">
 									<img src={left_purple_lens_flare} />
 								</div>
-								<div className="relative w-full mt-8 pt-8 pb-16 px-5 bg-[rgba(212,52,254,0.12) border-2 border-getlinkedai_fuchsia rounded-md lg:p-12">
-									<div className="absolute top-0 left-0 bg-[rgba(217,217,217,0.03)] h-full w-full"></div>
+								<div className="relative w-full mt-10 pt-8 pb-16 px-5 bg-[rgba(217,217,217,0.03)] border-2 border-getlinkedai_fuchsia rounded-md lg:p-12">
+									<div className="absolute w-4 -top-[5%] right-[6%]">
+										<img src={purple_star_3x} />
+									</div>
 									
-									<div>
+									<div className="">
 										<p className="text-center leading-7 text-gray-50 text-[.9rem] font-medium lg:text-left">
 											At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect,
 											use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you 
@@ -721,7 +749,7 @@ function Home() {
 										</div>
 									</div>
 								</div>
-								<div className="absolute bottom-52 -left-6">
+								<div className="absolute z-30 bottom-52 -left-6">
 									<img src={purple_star_3x} className="w-4 h-6" />
 								</div>
 							</div>
@@ -730,8 +758,20 @@ function Home() {
 						<div className="relative text-center bg-red-10 mt-20 lg:w-[40%]">
 							<div className="absolute w-[80%] top-[5.2rem] right-[15%] bg-red-20">
 								<img src={man_lock} />
+								<div className="absolute w-3 bottom-[15%] left-[15%]">
+									<img src={white_star_3x} className="w-full h-full" />
+								</div>
+								<div className="absolute w-2 bottom-[15%] -right-[2%]">
+									<img src={gray_star_3x} className="w-full h-full" />
+								</div>
 							</div>
-							<div className="bg-blue-20 w-[75%] mx-auto lg:w-full">
+							<div className="relative bg-blue-20 w-[75%] mx-auto lg:w-full">
+								<div className="absolute w-4 top-[24%] -left-[15%]">
+									<img src={purple_star_3x} className="w-full h-full" />
+								</div>
+								<div className="absolute w-2 top-[30%] right-[20%]">
+									<img src={white_star_3x} className="w-full h-full" />
+								</div>
 								<img src={shield_lock} className="w-full h-full" />
 							</div>
 						</div>

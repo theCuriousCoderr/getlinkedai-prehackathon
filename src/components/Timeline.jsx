@@ -15,13 +15,13 @@ function Timeline({id, events, details, date}) {
 
             <div className="w-[90%] text-sm bg-red-30 flex flex-col gap-2">
                 <div className="space-y-1">
-                    <p className="text-getlinkedai_fuchsia font-bold text-left">{events}</p>
+                    <p className="text-getlinkedai_fuchsia font-bold text-left text-base">{events}</p>
                     <p className="text-gray-100 leading-6 text-left">
                     {details}
                     </p>
                 </div>
                 <div>
-                    <p className="text-[#D434FE] font-bold text-left">{date}</p>
+                    <p className="text-[#D434FE] font-bold text-left text-base">{date}</p>
                 </div>
             </div>
         </div>
