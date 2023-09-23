@@ -420,7 +420,7 @@ function Home() {
 							</div>
 							<div className="space-y-5 mt-12">
 								{ FAQs.map(items => 
-										<button key={items} className="relative w-full flex flex-wrap justify-between bg-red-20 pb-1 border-b-2 border-fuchsia-500">
+										<button key={items} className="relative w-full flex flex-wrap justify-between bg-red-20 pb-1 border-b-2 border-[rgba(212,52,254,1)]">
 											<p className="text-[.9rem] font-normal text-gray-50 w-[88%] bg-red-40 text-left">{items}</p>
 											<div className="w-1/ bg-blue-30 absolute bottom-4 right-0">
 												<img src={add} className="w-3 h-3" />
@@ -548,7 +548,7 @@ function Home() {
 									<img src={gray_star_3x} className="w-full h-full" />
 								</div>
 								{/* silver medal */}
-								<div className="bg-blue-40 relative w-[30%] h-[85%] bg-[rgba(212,52,254,0.12)] border-2 border-getlinkedai_fuchsia rounded lg:h-52">
+								<div className="bg-blue-40 relative w-[30%] h-[85%] bg-[rgba(212,52,254,0.12)] border border-getlinkedai_fuchsia rounded lg:h-52">
 									<div className="relative ">
 										<div className="absolute text-center w-full -top-12 left-0 bg-red-20 lg:w-44 lg:-top-20 lg:left-2">
 											<div className="">
@@ -564,7 +564,7 @@ function Home() {
 									</div>
 								</div>
 								{/* gold medal */}
-								<div className="bg-blue-40 relative w-[30%] h-[90%] bg-[rgba(212,52,254,0.12)] border-2 border-getlinkedai_fuchsia rounded lg:h-[14rem]">
+								<div className="bg-blue-40 relative w-[30%] h-[90%] bg-[rgba(144,58,255,0.12)] border border-[rgba(144,58,255,1)] rounded-lg lg:h-[14rem]">
 									<div className="relative ">
 										<div className="absolute text-center w-[8rem] -top-20 -left-6 bg-red-20 lg:w-[17rem] lg:-top-[10rem] lg:-left-[3rem]">
 											<div className="">
@@ -580,7 +580,7 @@ function Home() {
 									</div>
 								</div>
 								{/* bronze medal */}
-								<div className="bg-blue-40 relative w-[30%] h-[85%] bg-[rgba(212,52,254,0.12)] border-2 border-getlinkedai_fuchsia rounded lg:h-52">
+								<div className="bg-blue-40 relative w-[30%] h-[85%] bg-[rgba(212,52,254,0.12)] border border-getlinkedai_fuchsia rounded lg:h-52">
 									<div className="relative ">
 										<div className="absolute text-center w-full -top-12 left-0 bg-red-20 lg:w-44 lg:-top-20 lg:left-2">
 											<div className="">
@@ -613,7 +613,7 @@ function Home() {
 							<p className="text-gray-200 leading-5 mt-1 font-sans text-[.8rem] font-normal">Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
 						</div>
 
-						<div className="relative py-6 px-12 bg-[rgba(255, 255, 255, 0.01)] border-2 border-getlinkedai_fuchsia mt-10 rounded lg:p-24">
+						<div className="relative py-6 px-12 bg-[rgba(255, 255, 255, 0.01)] border border-getlinkedai_fuchsia mt-10 rounded lg:p-24">
 							<div className="absolute w-2 top-1 left-[5%]">
 								<img src={purple_star_3x} className="w-full h-full" />
 							</div>
@@ -712,7 +712,7 @@ function Home() {
 								<div className="absolute -left-36 bottom-0">
 									<img src={left_purple_lens_flare} />
 								</div>
-								<div className="relative w-full mt-10 pt-8 pb-16 px-5 bg-[rgba(217,217,217,0.03)] border-2 border-getlinkedai_fuchsia rounded-md lg:p-12">
+								<div className="relative w-full mt-10 pt-8 pb-16 px-5 bg-[rgba(217,217,217,0.03)] border border-getlinkedai_fuchsia rounded-md lg:p-12">
 									<div className="absolute w-4 -top-[5%] right-[6%]">
 										<img src={purple_star_3x} />
 									</div>
