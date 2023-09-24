@@ -104,7 +104,7 @@ function Contact({sideNav, setSideNav, handleSideBarScroll}) {
                
             </div>
            
-            <div className='relative lg:w-[45%] lg:bg-[rgba(255,255,255,0.03)] lg:p-16 '>
+            <div className='relative lg:w-[45%] lg:bg-[rgba(255,255,255,0.03)] lg:p-16 lg:h-[75vh] '>
                 <div className=''>
                     <div className='hidden lg:block text-getlinkedai_fuchsia text-xl font-semibold mt-16 text-left lg:mt-0 lg:mb-10'>
                         <p>Questions or need assistance?</p>

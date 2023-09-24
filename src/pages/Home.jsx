@@ -70,7 +70,7 @@ const FAQs = [
 function Home({sideNav, setSideNav, handleSideBarScroll}) {
 
 	useEffect(()=> {
-		window.scrollTo(0, 0);
+		// window.scrollTo(0, 0);
 		setSideNav(false);
 		let hash = window.location.hash;
 		if (hash !== "") {
@@ -591,7 +591,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 							</div>
 							<div className="flex flex-col w-full bg-red-20 ">
 								{/* top row */}
-								<div className="flex flex-wrap justify-between bg-red-30 h-7">
+								<div className="flex flex-wrap justify-between bg-red-30 h-7 lg:h-20 lg:-mt-3">
 									<div className="relative w-[25%] h-full bg-red-30 lg:h-auto">
 										<div className="flex flex-wrap justify-center">
 											<div className="absolute bg-blue-40 h-full w-[60%] mx-auto">
@@ -601,14 +601,14 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 									</div>
 									<div className="relative w-[40%] h- border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
 										<div className="flex flex-wrap justify-center mt-3">
-											<div className="absolute bottom-3 bg-blue-40 w-[70%] mx-auto">
+											<div className="absolute bottom-3 bg-blue-40 w-[70%] mx-auto lg:bottom-7">
 												<img src={liberty_company} className="w-full h-full"  />
 											</div>
 										</div>
 									</div>
 									<div className="relative w-[25%] h-full bg-red-30 lg:h-auto">
 										<div className="flex flex-wrap justify-center">
-											<div className="absolute bg-blue-40 bottom-1 w-[60%] mx-auto">
+											<div className="absolute bg-blue-40 bottom-1 w-[60%] mx-auto lg:h-20">
 												<img src={white_crown} className="w-full h-full" />
 											</div>
 										</div>
@@ -623,7 +623,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 									<div className="w-[27%] h-[16%] bg-getlinkedai_fuchsia mt-1"></div>
 								</div>
 								{/* bottom row */}
-								<div className="flex flex-wrap justify-between bg-red-20 h-7">
+								<div className="flex flex-wrap justify-between bg-red-20 h-7 lg:h-20">
 									<div className="relative w-[25%] h- bg-red-30">
 										<div className="flex flex-wrap justify-center">
 											<div className="absolute bg-blue-40 w-[60%] mx-auto mt-1 ml-2">
@@ -633,16 +633,16 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 									</div>
 									<div className="relative w-[40%] h- border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
 										<div className="flex flex-wrap justify-center mt-3">
-											<div className="absolute top-0 bg-blue-40 w-[70%] mx-auto">
+											<div className="absolute top-0 bg-blue-40 w-[70%] mx-auto lg:-top-[8%]">
 												<img src={paybox} className="w-full h-full"  />
 											</div>
 										</div>
 									</div>
 									<div className="w-[25%] h- bg-red-30">
 										<div className="relative">
-											<div className="relative text-[.5rem] bg-blue-20 mt-1">
+											<div className="relative text-[.5rem] bg-blue-20 mt-1 lg:text-4xl lg:mt-3">
 												<span className="text-white">Vuzual</span><span className="text-red-600 ml-1 font-bold">Plus</span>
-												<div className="absolute -bottom-1 -right-0 text-[.2rem] text-gray-50 font-medium">
+												<div className="absolute -bottom-1 -right-0 text-[.2rem] text-gray-50 font-medium lg:text-base lg:-bottom-[60%]">
 													<p>Design Studios</p>
 												</div>
 											</div>
@@ -664,7 +664,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 					<div className="absolute right-0 -top-52">
 						<img src={right_purple_lens_flare} />
 					</div>
-					<div className="relative w-[80%] mx-auto text-center pt-16 pb-48 bg-red-30 lg:flex">
+					<div className="relative w-[80%] mx-auto text-center pt-16 pb-48 bg-red-30 lg:flex lg:justify-between">
 						<div className="lg:w-[50%]">
 							<div className="relative lg:text-left">
 								<div className="absolute w-3 right-[20%] -top-[15%]">
@@ -731,8 +731,8 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 						</div>
 
 						<div className="relative text-center bg-red-10 mt-20 lg:w-[40%]">
-							<div className="absolute w-[80%] top-[5.2rem] right-[15%] bg-red-20">
-								<img src={man_lock} />
+							<div className="absolute w-[80%] top-[5.2rem] right-[15%] bg-red-20 lg:w-full lg:top-[23%] lg:right-[10%]">
+								<img src={man_lock} className="lg:w-full lg:h-full" />
 								<div className="absolute w-3 bottom-[15%] left-[15%]">
 									<img src={white_star_3x} className="w-full h-full" />
 								</div>
