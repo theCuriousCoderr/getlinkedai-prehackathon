@@ -36,11 +36,6 @@ function Contact({sideNav, setSideNav, handleSideBarScroll}) {
         if (data.id) {
             alert(`MESSAGE SUCCESSFULLY SENT.\nYour Message Id Number Is ${data.id}.`)
         }
-        setContactData({
-            "email":"",
-            "first_name": "",
-            "message": ""
-        });
         
     }
     
