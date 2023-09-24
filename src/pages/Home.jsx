@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import getlinked from '../images/getlinked.png';
-import stair_hamburger from '../images/stair_hamburger.png';
+
 import left_purple_lens_flare from '../images/left_Purple-Lens-Flare.png';
 import right_purple_lens_flare from '../images/right_Purple-Lens-Flare.png';
 import Igniting_a_revolution from '../images/Igniting_a_revolution.png';
@@ -43,9 +43,10 @@ import twitter from '../images/twitter.png';
 import instagram from '../images/instagram.png';
 import location from '../images/location.png';
 import call from '../images/call.png';
-import close from '../images/close.png';
 import Timeline from "../components/Timeline.jsx";
 import extra_dark_layer from '../images/extra_dark_layer.png';
+import SideBar from "../components/SideBar";
+import Header from "../components/Header";
 
 
 const timeline = [
@@ -65,10 +66,19 @@ const FAQs = [
 	"What happens after the hackathon ends", 
 	"Can I work on a project I started before the hackathoon?"
 ]
-// alert("Yo")
 
-function Home() {
-	const [sideNav, setSideNav] = useState(false)
+function Home({sideNav, setSideNav, handleSideBarScroll}) {
+
+	useEffect(()=> {
+		window.scrollTo(0, 0);
+		setSideNav(false);
+		let hash = window.location.hash;
+		if (hash !== "") {
+			hash = hash.replace("#", "");
+			handleSideBarScroll(hash);
+		}
+	}, [])
+	
 
 	const judingCriteria = [
 		{"title": "Innovation and Creativity:", "content": "Evaluate the uniqueness and creativity of the solution. Consider whether it addresses a real-world problem in a novel way or introduces innovative features. "},
@@ -78,67 +88,26 @@ function Home() {
 		{"title": "Adherence to Hackathon Rules:", "content": "Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements. "}
 	]
 
+
 	return (
 		<div className="relative :bg-red-300">
-			{ sideNav && 
-			<div className="fixed z-10 bg-getlinkedai_bg h-full w-full p-10">
-				<div onClick={()=> setSideNav(false)} className="float-right bg-red-20">
-					<div className="bg-gradient-to-t from-pink-500 to-getlinkedai_light_purple w-8 h-8 p-[2px] rounded-full flex justify-center align-middle">
-						<div className="bg-getlinkedai_bg w-full h-full flex pt-[7.5px] justify-center rounded-full" >
-							<img src={close} className="w-[.8rem] h-[.8rem]" />
-						</div>
-					</div>
-				</div>
-				<ul className="bg-red-10 mt-20">
-					<div className="text-gray-200 font-semibold text-lg space-y-3">
-						<li>Timeline</li>
-						<li>Overview</li>
-						<li>FAQs</li>
-						<li>
-							<NavLink to="/contact">Contact</NavLink>
-						</li>
-					</div>
-					
-					<li className="bg-red-20 w-2/3 mt-7">
-						<button className="w-full bg-blue-20 h-14 rounded-md text-white text-lg font-semibold bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple">
-							<NavLink to="/register" className="bg-red-40 px-14 py-4">Register</NavLink>
-						</button>
-					</li>
-				</ul>
-			</div> 
-			}
+			{ sideNav && <SideBar setSideNav={setSideNav} handleSideBarScroll={handleSideBarScroll} /> }
 
-			<header className="bg-getlinkedai_bg px-10 py-7 align-middle flex justify-between border-b border-gray-800
-			lg:px-20 lg:py-10">
-				<div>
-					<span className="text-white text-[15px] font-bold font-['Clash Display'] lg:text-3xl">get</span>
-					<span className="text-fuchsia-500 text-[15px] font-bold font-['Clash Display'] lg:text-3xl">linked</span>
-				</div>
-				<div className="lg:hidden">
-					<button onClick={()=> setSideNav(true)}><img src={stair_hamburger}/></button>
-				</div>
-				<ul className="hidden gap-5 lg:flex">
-					<li className="text-gray-50 font-normal text-sm">Timeline</li>
-					<li className="text-gray-50 font-normal text-sm">Overview</li>
-					<li className="text-gray-50 font-normal text-sm">FAQs</li>
-					<li className="text-gray-50 font-normal text-sm">Contact</li>
-					<li className="relative ml-10 w-40">
-						<button className="w-full h-12 rounded-lg -mt-3 bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 text-lg">Register</button>
-					</li>
-				</ul>
-			</header>
+			<div>
+				<Header setSideNav={setSideNav} handleSideBarScroll={handleSideBarScroll} />
+			</div>
 
 			<div className="relative bg-getlinkedai_bg">
 				<div className="absolute -top-10">
 					<img src={left_purple_lens_flare} />
 				</div>
 
-				<div className="relative text-center mx-auto pt-8 bg-red-20 lg:pt-0">
+				<div className="relative text-center mx-auto pt-8 bg-red-20 lg:pt-5">
 					{/* <div className="relative"> */}
 					<div className="relative w-full mx-auto bg-red-20">
-						<div className="relative w-[17rem] mx-auto">
-							<p className="bg-red-20  text-white text-center text-[.9rem] font-bold italic lg:text-[1.5rem] lg:px-14 lg:text-right">Igniting a Revolution in HR Innovation</p>
-							<div className="absolute right-[3%] top-6 w-24 lg:w-40 lg:top-9 lg:right-14">
+						<div className="relative w-[17rem] mx-auto bg-red-30 lg:w-full">
+							<p className="bg-red-20  text-white text-center text-[.9rem] font-bold italic lg:text-[2rem] lg:px-14 lg:text-right">Igniting a Revolution in HR Innovation</p>
+							<div className="absolute right-[3%] top-6 w-24 lg:w-40 lg:top-11 lg:right-14">
 								<img src={purple_strand} className="w-full" />
 							</div>
 						</div>
@@ -346,8 +315,7 @@ function Home() {
 				
 
 				{/*pie chart  */}
-				<div className="relative bg-red-30">
-				
+				<div id="Overview" className="relative bg-red-30">
 					<div className="absolute left-0 top-16">
 						<img src={left_purple_lens_flare} />
 					</div>
@@ -355,13 +323,14 @@ function Home() {
 						<img src={right_purple_lens_flare} />
 					</div>
 
-					<div className="relative w-[80%] mx-auto text-center py-16 bg-red-20 lg:flex">
-						<div className="lg:w-[40%] bg-blue-20 lg:mt-40">
+					{/* <img src={pie_chart} className="w-full h-full"/> */}
+					<div className="relative w-[80%] mx-auto text-center py-16 bg-red-20 lg:flex lg:w-[90%]">
+						<div className="lg:w-[50%] bg-blue-20 lg:mt-24">
 							<div className="absolute top-5 left-[41%]">
 								<img src={purple_star_3x} className="w-4 h-5" />
 							</div>
-							<div className="bg-red-30 w-full flex justify-center relative bg-red-40">
-								<div className="relative lg:w-full lg:h-full">
+							<div className="bg-red-30 w-full  flex justify-center relative bg-red-40 lg:h-full">
+								<div className="relative lg:w-full lg:h-[30rem]">
 									<img src={pie_chart} className="w-full h-full"/>
 								</div>
 								<div className="absolute w-3 top-[52%] left-[56%]">
@@ -371,29 +340,29 @@ function Home() {
 						</div>
 						
 
-						<div className="relative text-center mt-3 lg:w-[60%] bg-red-40">
+						<div className="relative text-center mt-3 lg:w-[50%] bg-red-40">
 							<p className="text-xl font-bold text-gray-100 lg:text-3xl lg:font-extrabold lg:text-left">Judging Criteria</p>
 							<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-3xl lg:font-extrabold lg:text-left">Key attributes</p>
-							<div className="relative w-full bg-red-30 mt-5 space-y-5">
+							<div className="relative w-full bg-red-30 mt-5 space-y-">
 								<div className="absolute bottom-6 right-1">
 									<img src={white_star_3x} className="w-3 h-3" />
 								</div>
 
-								{/* <div> */}
+								<div className="lg:space-y-3">
 									{
 										judingCriteria.map(items => {
 											return (
 												<div key={items.title} className="text-center lg:text-left">
 													<span className="text-[rgba(255,38,185,1)] font-medium text-[1rem]">{items.title}</span>
-													<span className="text-gray-200 font-normal text-[.9rem] ml-1 leading-7">{items.content}</span>
+													<span className="text-gray-200 font-normal text-[.9rem] ml-1 leading-6">{items.content}</span>
 												</div>
 											)
 										})
 									}
-								{/* </div> */}
+								</div>
 
 								<div className="w-full bg-red-40 lg:float-left">
-									<div className="relative w-2/3 mx-auto text-center bg-red-20 lg:w-1/3 lg:mx-0">
+									<div className="relative w-2/3 mx-auto text-center bg-red-20 lg:w-1/3 lg:mx-0 lg:mt-7">
 										<button className="w-2/3 h-10 rounded-lg  bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 font-normal lg:w-full">Read More</button>
 									</div>
 								</div>
@@ -407,7 +376,7 @@ function Home() {
 				<hr className="border-gray-600" />
 
 				{/* Frequent;y ask question */}
-				<div className="relative w-full">
+				<div id="FAQs" className="relative w-full">
 					<div className="absolute w-5 h-6 top-8 left-[15%]">
 						<img src={purple_star_3x} className="w-full h-full" />
 					</div>
@@ -482,7 +451,7 @@ function Home() {
 				<hr className="border-gray-600" />
 
 				{/*Timeline  */}
-				<div className="relative w-full bg-getlinkedai_bg ">
+				<div id="Timeline" className="relative w-full bg-getlinkedai_bg ">
 					<div  className="relative w-[80%] mx-auto text-center py-10 bg-red-30">
 						<div className="space-y-3 bg-red-20 lg:w-[50%] lg:mx-auto">
 							<p className="text-xl font-bold text-gray-50 lg:text-3xl lg:font-extrabold">Timeline</p>

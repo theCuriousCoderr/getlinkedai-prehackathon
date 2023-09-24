@@ -10,9 +10,11 @@ import wink from '../images/wink.png';
 import gray_star_3x from '../images/gray_star_3x.png';
 import gra_star_3x from '../images/gra_star_3x.png';
 import purple_star_3x from '../images/purple_star_3x.png';
+import Header from '../components/Header';
+import SideBar from '../components/SideBar';
 
 
-function Register() {
+function Register({sideNav, setSideNav, handleSideBarScroll}) {
     const [success, setSuccess] = useState(false);
     const [categoryList, setCategoryList] = useState([]);
     const [registerData, setRegisterData] = useState({
@@ -76,7 +78,12 @@ function Register() {
     
 
   return (
-    <div className='relative w-full bg-getlinkedai_bg pb-[1rem] '>
+    <div className='relative w-full bg-getlinkedai_bg pb-[1rem] lg:pb-28'>
+       { sideNav && <SideBar setSideNav={setSideNav} handleSideBarScroll={handleSideBarScroll} /> }
+
+        <div>
+            <Header setSideNav={setSideNav} handleSideBarScroll={handleSideBarScroll} />
+        </div>
         { success && 
         <div>
         {/* background */}
@@ -133,26 +140,6 @@ function Register() {
             <img src={left_purple_lens_flare} />
         </div>
        
-        <header className="hidden bg-getlinkedai_bg px-10 py-7 align-middle lg:flex justify-between border-b border-gray-800
-			lg:px-20 lg:py-5">
-            <div>
-                <span className="text-white text-[15px] font-bold font-['Clash Display'] lg:text-3xl">get</span>
-                <span className="text-fuchsia-500 text-[15px] font-bold font-['Clash Display'] lg:text-3xl">linked</span>
-            </div>
-            <ul className="hidden gap-5 lg:flex mt-2">
-                <li className="text-gray-50 font-normal text-sm">Timeline</li>
-                <li className="text-gray-50 font-normal text-sm">Overview</li>
-                <li className="text-gray-50 font-normal text-sm">FAQs</li>
-                <li className="text-gray-50 font-normal text-sm">Contact</li>
-                <li className="relative ml-12 w-36">
-                    <button className="absolute top-1 w-full h-10 rounded-lg -mt-3 bg-gradient-to-t from-pink-500 to-getlinkedai_light_purple text-gray-50 text-sm lg:p-[.1rem] hover:text-pink-500">
-                        <div className='bg-getlinkedai_bg rounded-md w-full h-full pt-2'>
-                            Register
-                        </div>
-                    </button>
-                </li>
-            </ul>
-        </header>
         <div className='relative w-[70%] mx-auto py-7 bg-red-10 lg:flex lg:w-[90%] lg:justify-evenly lg:py-0  lg:h-[80vh lg:top-[10vh]'>
             <p className='text-getlinkedai_fuchsia font-bold text-lg lg:hidden'>Register</p>
 
@@ -195,8 +182,8 @@ function Register() {
                             <img src={gray_star_3x} className='w-full h-full' />
                         </div>
                         <div className='space-y-4'>
-                            <div className='space-y-4 lg:flex lg:justify-between bg-red-20'>
-                                 <div className='space-y-1 lg:w-[48%]'>
+                            <div className='space-y-4 lg:flex lg:justify-between bg-red-20 lg:space-y-0'>
+                                <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='team_name' className='text-white'>Team's Name</label>
                                     <input required type="text" name="team_name" value={registerData.team_name} onChange={handleChange} placeholder='Enter the name of your group' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
                                 </div>
@@ -206,7 +193,7 @@ function Register() {
                                 </div>
                             </div>
 
-                            <div className='space-y-4 lg:flex lg:justify-between bg-red-20'>
+                            <div className='space-y-4 lg:flex lg:justify-between bg-red-20 lg:space-y-0'>
                                 <div className='space-y-1 lg:w-[48%]'>
                                     <label htmlFor='email' className='text-white'>Email</label>
                                     <input required type="text" name="email"value={registerData.email} onChange={handleChange} placeholder='Enter your email addres' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem]' />
