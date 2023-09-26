@@ -8,20 +8,20 @@ function Timeline({id, events, details, date}) {
             {/* stick-and-ball */}
             <div className="relative w-[2%] bg-red-30 flex flex-col text-center justify-start align-middle gap-2">
                 <div className="h-[85%] w-1 bg-[#D434FE] ml-2"></div>
-                <div className="w-5 h-5 text-center rounded-full bg-gradient-to-r from-getlinkedai_fuchsia to-getlinkedai_light_purple ">
+                <div className="w-5 h-5 md:h-6 md:w-6 text-center rounded-full bg-gradient-to-r from-getlinkedai_fuchsia to-getlinkedai_light_purple ">
                     <p className="text-gray-50 text-sm font-bold">{id}</p>
                 </div>
             </div>
 
             <div className="w-[90%] text-sm bg-red-30 flex flex-col gap-2">
                 <div className="space-y-1">
-                    <p className="text-getlinkedai_fuchsia font-bold text-left text-base">{events}</p>
-                    <p className="text-gray-100 font-normal leading-6 text-left">
+                    <p className="text-getlinkedai_fuchsia font-bold text-left text-base md:text-xl">{events}</p>
+                    <p className="text-gray-100 font-normal leading-6 text-left md:text-lg">
                     {details}
                     </p>
                 </div>
                 <div>
-                    <p className="text-[#D434FE] font-bold text-left text-base">{date}</p>
+                    <p className="text-[#D434FE] font-bold text-left text-base md:text-xl">{date}</p>
                 </div>
             </div>
         </div>

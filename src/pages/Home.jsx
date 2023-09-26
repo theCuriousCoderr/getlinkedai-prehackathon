@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import getlinked from '../images/getlinked.png';
 
 import left_purple_lens_flare from '../images/left_Purple-Lens-Flare.png';
@@ -68,6 +68,7 @@ const FAQs = [
 ]
 
 function Home({sideNav, setSideNav, handleSideBarScroll}) {
+	let navigate = useNavigate();
 
 	useEffect(()=> {
 		// window.scrollTo(0, 0);
@@ -105,9 +106,9 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 				<div className="relative text-center mx-auto pt-8 bg-red-20 lg:pt-5">
 					{/* <div className="relative"> */}
 					<div className="relative w-full mx-auto bg-red-20">
-						<div className="relative w-[17rem] mx-auto bg-red-30 lg:w-full">
-							<p className="bg-red-20  text-white text-center text-[.9rem] font-bold italic lg:text-[2rem] lg:px-14 lg:text-right">Igniting a Revolution in HR Innovation</p>
-							<div className="absolute right-[3%] top-6 w-24 lg:w-40 lg:top-11 lg:right-14">
+						<div className="relative w-[17rem] mx-auto bg-red-30 md:w-[28rem] lg:w-full">
+							<p className="bg-red-20  text-white text-center text-[.9rem] md:text-2xl font-bold italic lg:text-[2rem] lg:px-14 lg:text-right">Igniting a Revolution in HR Innovation</p>
+							<div className="absolute right-[3%] top-6 w-24 md:w-36 md:top-8 lg:w-40 lg:top-11 lg:right-14">
 								<img src={purple_strand} className="w-full" />
 							</div>
 						</div>
@@ -119,8 +120,8 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 				{/* getlinked Tech */}
 					<div className="relative w-[90%] mx-auto mt-14 text-center bg-red-20 lg:w-[60%] lg:text-left lg:pl-28 lg:mt-32">
 						<div className="relative bg-red-20">
-							<div className="relative w-72 mx-auto bg-red-40 lg:w-full">
-								<p className=" text-gray-50 text-4xl font-bold font-['Clash Display'] lg:text-[4.3rem]">getlinked Tech</p>
+							<div className="relative w-72 md:w-[22rem] mx-auto bg-red-40 lg:w-full">
+								<p className=" text-gray-50 text-4xl font-bold font-['Clash Display'] md:text-[3rem] lg:text-[4.3rem]">getlinked Tech</p>
 								<div className="lg:absolute lg:w-10 lg:h-14 lg:right-[10%] lg:-top-12 bg-red-30 ">
 									<div className="absolute w-5 h-6 -top-[20%] right-[13%] bg-red-20 lg:w-10 lg:h-12 lg:-left-[5.5rem] lg:top-2">
 										<img src={idea_bulb} className="w-full h-full" />
@@ -142,25 +143,25 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 						</div>
 						
 
-						<div className="relative flex justify-center lg:justify-start lg:mt-8" >
-							<div className="text-4xl inline-block lg:text-[4.3rem] bg-red-20">
-								<span className="text-gray-50 font-bold font-['Clash Display'] ">Hackathon </span>
+						<div className="relative flex justify-center lg:justify-start md:mt-2 lg:mt-8" >
+							<div className="text-4xl inline-block md:text-[2.6rem] lg:text-[4.3rem] bg-red-20">
+								<span className="text-gray-50 font-bold font-['Clash Display']">Hackathon </span>
 								<span className="text-fuchsia-500 font-bold font-cabin lg:font-extrabold">1.0</span>
 							</div>
 
 							<div className="flex align-middle mt-1 bg-red-20 lg:-mt-3">
 								<div className="mt-1">
-									<img src={chain} className="w-8 h-8 lg:w-16 lg:h-16" />
+									<img src={chain} className="w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16" />
 								</div>
 								<div  className="relative last:mt-2">
-									<img src={banger} className="w-7 h-7 lg:w-14 lg:h-14" />
+									<img src={banger} className="w-7 h-7 md:w-8 md:h-8 lg:w-14 lg:h-14" />
 								</div>
 							</div>
 							
 						</div>
 
-						<div className="text-center text-gray-50 text-[.95rem] font-normal space-y-1 mt-2">
-							<div className="lg:hidden font-normal">
+						<div className="text-center text-gray-50 text-[.95rem] font-normal space-y-1 mt-2 md:my-5">
+							<div className="lg:hidden font-normal md:text-xl">
 								<p>Participate in getlinked tech Hackathon</p>
 								<p>2023 stand a chance to win a Big prize</p>
 							</div>
@@ -170,39 +171,39 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 							
 						</div>
 
-						<div className="relative w-2/3 mx-auto text-center bg-red-20 my-5 lg:mx-0 lg:w-1/3">
+						<div className="relative w-2/3 mx-auto text-center bg-red-20 my-5 lg:mx-0 lg:w-1/3 md:my-8">
 							<div className="absolute w-2 right-0 top-[40%]">
 								<img src={gray_star_3x} className="w-full h-full" />
 							</div>
-							<button className="w-2/3 h-12 rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 font-medium lg:w-full">
+							<button className="w-2/3 h-12 md:h-14 rounded-md bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 font-medium md:text-2xl lg:w-full">
 								<NavLink to="/register" className="py-3 px-10 bg-blue-20">Register</NavLink>
 							</button>
 						</div>
 
-						<div className="w-[60%] mx-auto bg-red-20 flex justify-between bg-red-20 font-medium lg:mx-0 lg:w-1/3 lg:mt-16">
+						<div className="w-[60%] mx-auto bg-red-20 flex justify-between md:justify-center md:gap-12 lg:justify-normal lg:gap-10 bg-red-20 font-medium lg:mx-0 lg:w-1/3 md:mt-10 lg:mt-16">
 							<div className="flex gap-1">
-								<div className="relative text-gray-50 text-4xl flex gap-1 bg-red-20">
+								<div className="relative text-gray-50 text-4xl md:text-5xl flex gap-1 bg-red-20">
 									<p className="sofia">0</p>
 									<p className="sofia">0</p>
-									<div className="absolute -bottom-1 -right-4 text-gray-50 text-[.9rem]">
+									<div className="absolute -bottom-1 md:bottom-1 -right-4 md:-right-4 text-gray-50 text-[.9rem] md:text-xl">
 										<p>H</p>
 									</div>
 								</div>
 							</div>
 							<div className="flex gap-1">
-								<div className="relative text-gray-50 text-4xl flex gap-1 bg-red-20">
+								<div className="relative text-gray-50 text-4xl md:text-5xl flex gap-1 bg-red-20">
 									<p className="sofia">0</p>
 									<p className="sofia">0</p>
-									<div className="absolute  -bottom-1 -right-4 text-gray-50 text-[.9rem]">
+									<div className="absolute  -bottom-1 md:bottom-1 -right-4 md:-right-5 text-gray-50 text-[.9rem] md:text-xl">
 										<p>M</p>
 									</div>
 								</div>
 							</div>
 							<div className="flex gap-1">
-								<div className="relative text-gray-50 text-4xl flex gap-1 bg-red-20">
+								<div className="relative text-gray-50 text-4xl md:text-5xl flex gap-1 bg-red-20">
 									<p className="sofia">0</p>
 									<p className="sofia">0</p>
-									<div className="absolute  -bottom-1 -right-3 text-gray-50 text-[.9rem]">
+									<div className="absolute  -bottom-1 md:bottom-1 -right-3 md:-right-3 text-gray-50 text-[.9rem] md:text-xl">
 										<p>S</p>
 									</div>
 								</div>
@@ -212,7 +213,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 
 					{/* vr man */}
 					<div className="relative bg-getlinkedai_bg mt-8 lg:w-1/2 ">
-						<div className="absolute -top-3 left-[3%] w-[20rem] h-[20rem] bg-red-20 lg:w-[33rem] lg:h-[33rem] lg:left-[4%]">
+						<div className="absolute -top-3 left-[3%] md:left-[1%] w-[20rem] h-[20rem] md:w-full md:h-full  bg-red-20 lg:w-[33rem] lg:h-[33rem] lg:left-[4%]">
 							<img src={sparkle_ball} className="w-full h-full" />
 						</div>
 						<div className="bg-red-20 w-full h-full"> 
@@ -229,7 +230,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 					<div className="lg:w-[40%] bg-red-40">
 						<div className="bg-red-30 w-full flex justify-center relative text-center bg-red-30">
 							<img src={the_big_idea} className="w-full h-full" />
-							<div className="bg-red-40 flex flex-wrap justify-center absolute top-[45%] text-center text-gray-50 font-medium lg:text-2xl">
+							<div className="bg-red-40 flex flex-wrap justify-center absolute top-[45%] text-center text-gray-50 font-medium md:text-3xl lg:text-2xl">
 								<div>
 									<p>The Big</p>
 									<p>Idea!</p>
@@ -247,19 +248,19 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 					</div>
 					
 
-					<div className="relative text-center mt-7 lg:w-[50%] lg:mt-20">
+					<div className="relative text-center mt-7 lg:w-[50%] lg:mt-10">
 						<div className="absolute w-3 right-[5%] top-6">
 							<img src={purple_star_3x} className="w-3 h-3" />
 						</div>
-						<p className="text-xl font-bold text-gray-100 lg:text-left lg:text-3xl lg:font-extrabold">Introduction to getlinked</p>
-						<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-left lg:text-3xl lg:font-extrabold">techHackathon 1.0</p>
-							<p className="text-gray-200 font-normal leading-7 lg:text-left lg:text-lg lg:font-semibold">
-								Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as 
-								day: to shape the future. Whether you're a coding genius, a design maverick, or a 
-								concept wizard, you'll have the chance to transform your ideas into reality. Solving 
-								real-world problems, pushing the boundaries of technology, and creating solutions 
-								that can change the world, that's what we're all about!
-							</p>
+						<p className="text-xl font-bold text-gray-100 lg:text-left md:text-3xl lg:text-3xl lg:font-extrabold">Introduction to getlinked</p>
+						<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-left md:text-3xl lg:text-3xl lg:font-extrabold">techHackathon 1.0</p>
+						<p className="text-gray-200 font-normal leading-7 lg:text-left md:text-xl md:mt-5 lg:text-xl lg:font-semibold">
+							Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as 
+							day: to shape the future. Whether you're a coding genius, a design maverick, or a 
+							concept wizard, you'll have the chance to transform your ideas into reality. Solving 
+							real-world problems, pushing the boundaries of technology, and creating solutions 
+							that can change the world, that's what we're all about!
+						</p>
 					</div>
 				</div>
 
@@ -287,10 +288,10 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 						</div>
 
 						<div className="relative text-center mt-3 lg:w-[50%] lg:mt-16">
-							<p className="text-xl font-bold text-gray-100 lg:text-left lg:text-3xl lg:font-extrabold">Rules and</p>
-							<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-left lg:text-3xl lg:font-extrabold">Guidelines</p>
+							<p className="text-xl font-bold text-gray-100 lg:text-left md:text-3xl lg:text-3xl lg:font-extrabold">Rules and</p>
+							<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-left md:text-3xl lg:text-3xl lg:font-extrabold">Guidelines</p>
 							<div className="relative w-full bg-red-30">
-								<p className="text-gray-200  font-normal leading-7 lg:text-left lg:text-xl lg:font-semibold">
+								<p className="text-gray-200  font-normal leading-7 lg:text-left md:text-xl md:mt-5 lg:text-xl lg:font-semibold">
 									Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as 
 									day: to shape the future. Whether you're a coding genius, a design maverick, or a 
 									concept wizard, you'll have the chance to transform your ideas into reality. Solving 
@@ -341,29 +342,29 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 						
 
 						<div className="relative text-center mt-3 lg:w-[50%] bg-red-40">
-							<p className="text-xl font-bold text-gray-100 lg:text-3xl lg:font-extrabold lg:text-left">Judging Criteria</p>
-							<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-3xl lg:font-extrabold lg:text-left">Key attributes</p>
+							<p className="text-xl font-bold text-gray-100 md:text-3xl lg:text-3xl lg:font-extrabold lg:text-left">Judging Criteria</p>
+							<p className="text-getlinkedai_fuchsia font-bold text-xl md:text-3xl lg:text-3xl lg:font-extrabold lg:text-left">Key attributes</p>
 							<div className="relative w-full bg-red-30 mt-5 space-y-">
 								<div className="absolute bottom-6 right-1">
 									<img src={white_star_3x} className="w-3 h-3" />
 								</div>
 
-								<div className="lg:space-y-3">
+								<div className="md:mt-7 md:space-y-7 lg:space-y-3">
 									{
 										judingCriteria.map(items => {
 											return (
 												<div key={items.title} className="text-center lg:text-left">
-													<span className="text-[rgba(255,38,185,1)] font-medium text-[1rem]">{items.title}</span>
-													<span className="text-gray-200 font-normal text-[.9rem] ml-1 leading-6">{items.content}</span>
+													<span className="text-[rgba(255,38,185,1)] font-medium text-[1rem] md:text-xl">{items.title}</span>
+													<span className="text-gray-200 font-normal text-[.9rem] ml-1 leading-6 md:text-xl">{items.content}</span>
 												</div>
 											)
 										})
 									}
 								</div>
 
-								<div className="w-full bg-red-40 lg:float-left">
+								<div className="w-full bg-red-40 mt-10 lg:float-left">
 									<div className="relative w-2/3 mx-auto text-center bg-red-20 lg:w-1/3 lg:mx-0 lg:mt-7">
-										<button className="w-2/3 h-10 rounded-lg  bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 font-normal lg:w-full">Read More</button>
+										<button className="w-2/3 h-10 md:h-16 rounded-lg  bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 font-normal md:text-2xl lg:w-full">Read More</button>
 									</div>
 								</div>
 							</div>
@@ -383,16 +384,16 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 					<div className="relative w-[80%] mx-auto text-center py-10 bg-red-30 lg:flex lg:justify-between">
 						<div className="lg:w-2/5 bg-red-20 lg:mt-16">
 							<div>
-								<p className="text-xl font-bold text-gray-100 lg:text-left lg:text-3xl lg:font-extrabold">Frequently Ask</p>
-								<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-left lg:text-3xl lg:font-extrabold">Question</p>
-								<p className="text-gray-200 leading-6 mt-3 font-bold text-[.9rem] lg:text-left">We got answers to the questions that you might want to ask about getlinked Hackathon 1.0</p>
+								<p className="text-xl font-bold text-gray-100 lg:text-left md:text-3xl lg:text-3xl lg:font-extrabold">Frequently Ask</p>
+								<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-left md:text-3xl lg:text-3xl lg:font-extrabold">Question</p>
+								<p className="text-gray-200 leading-6 mt-3 font-bold text-[.9rem] md:text-lg lg:text-left">We got answers to the questions that you might want to ask about getlinked Hackathon 1.0</p>
 							</div>
-							<div className="space-y-5 mt-12">
+							<div className="space-y-5 md:space-y-7 lg:w-full mt-12">
 								{ FAQs.map(items => 
 										<button key={items} className="relative w-full flex flex-wrap justify-between bg-red-20 pb-1 border-b-2 border-[rgba(212,52,254,1)]">
-											<p className="text-[.9rem] font-normal text-gray-50 w-[88%] bg-red-40 text-left">{items}</p>
-											<div className="w-1/ bg-blue-30 absolute bottom-4 right-0">
-												<img src={add} className="w-3 h-3" />
+											<p className="text-[.9rem] md:text-xl font-normal text-gray-50 w-[88%] bg-red-40 text-left">{items}</p>
+											<div className="w-1/ w-4 h-4 bg-blue-30 absolute bottom-4 right-0">
+												<img src={add} className="w-full h-full" />
 											</div>
 										</button>
 									)
@@ -454,8 +455,8 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 				<div id="Timeline" className="relative w-full bg-getlinkedai_bg ">
 					<div  className="relative w-[80%] mx-auto text-center py-10 bg-red-30">
 						<div className="space-y-3 bg-red-20 lg:w-[50%] lg:mx-auto">
-							<p className="text-xl font-bold text-gray-50 lg:text-3xl lg:font-extrabold">Timeline</p>
-							<p className="text-gray-200 font-normal text-[.9rem] ml-1 leading-7 lg:text-xl">Here is the breakdown of the time we anticipate using for the upcoming events.</p>
+							<p className="text-xl font-bold text-gray-50 md:text-3xl lg:text-3xl lg:font-extrabold">Timeline</p>
+							<p className="text-gray-200 font-normal text-[.9rem] md:text-xl ml-1 leading-7 lg:text-xl">Here is the breakdown of the time we anticipate using for the upcoming events.</p>
 						</div>
 
 						<ul className="relative w-full space-y-7 mt-14 bg-red-10">
@@ -497,9 +498,9 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 							<div className="absolute w-2 right-[20%] top-[20%]">
 								<img src={gra_star_3x} className="w-full h-full" />
 							</div>
-							<p className="text-xl font-bold text-gray-100 lg:text-3xl lg:font-extrabold">Prizes and</p>
-							<p className="text-getlinkedai_fuchsia font-bold text-xl lg:text-3xl lg:font-extrabold">Rewards</p>
-							<p className="text-gray-200 leading-7 mt-1 font-sans text-[.9rem] font-normal lg:text-lg">Highlight of the prizes or rewards for winners and for participants.</p>
+							<p className="text-xl font-bold text-gray-100 md:text-3xl lg:text-3xl lg:font-extrabold">Prizes and</p>
+							<p className="text-getlinkedai_fuchsia font-bold text-xl md:text-3xl lg:text-3xl lg:font-extrabold">Rewards</p>
+							<p className="text-gray-200 leading-7 mt-1 font-sans text-[.9rem] font-normal md:text-2xl lg:text-lg">Highlight of the prizes or rewards for winners and for participants.</p>
 						</div>
 
 						<div className="relative lg:flex lg:flex-wrap lg:justify-evenly lg:w-full bg-blue-20 lg:mt-64">
@@ -509,7 +510,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 								</div>
 								<img src={trophy_cup} className="w-full h-full " />
 							</div>
-							<div className="relative bg-yellow-40 flex flex-wrap justify-between h-36 mt-28 lg:w-[50%] lg:mt-24">
+							<div className="relative bg-yellow-40 flex flex-wrap justify-between h-36 md:h-64 mt-28 md:mt-48 md:w-[90%] md:mx-auto lg:w-[50%] lg:mt-24">
 								<div className="absolute w-3 right-0 -top-[50%]">
 									<img src={white_star_3x} className="w-full h-full" />
 								</div>
@@ -517,14 +518,14 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 									<img src={gray_star_3x} className="w-full h-full" />
 								</div>
 								{/* silver medal */}
-								<div className="bg-blue-40 relative w-[30%] h-[85%] bg-[rgba(212,52,254,0.12)] border border-getlinkedai_fuchsia rounded lg:h-52">
+								<div className="bg-blue-40 relative w-[30%] h-[85%] bg-[rgba(212,52,254,0.12)] border border-getlinkedai_fuchsia rounded md:h- lg:h-52">
 									<div className="relative ">
 										<div className="absolute text-center w-full -top-12 left-0 bg-red-20 lg:w-44 lg:-top-20 lg:left-2">
-											<div className="">
+											<div className="relative md:w-40 md:left-[2%] md:-top-[2rem]">
 												<img src={silver_medal} className="w-full h-full" />	
 											</div>
 											
-											<div className="mt-1 text-[.9rem] flex flex-col justify-center text-gray-50 font-bold lg:text-xl">
+											<div className="mt-1 text-[.9rem] md:-mt-[10%] md:text-2xl flex flex-col justify-center text-gray-50 font-bold lg:text-xl">
 												<p>2nd</p>
 												<p>Runner</p>
 												<p className="text-getlinkedai_fuchsia font-bold">N300,000</p>
@@ -535,12 +536,12 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 								{/* gold medal */}
 								<div className="bg-blue-40 relative w-[30%] h-[90%] bg-[rgba(144,58,255,0.12)] border border-[rgba(144,58,255,1)] rounded-lg lg:h-[14rem]">
 									<div className="relative ">
-										<div className="absolute text-center w-[8rem] -top-20 -left-6 bg-red-20 lg:w-[17rem] lg:-top-[10rem] lg:-left-[3rem]">
-											<div className="">
+										<div className="absolute text-center w-[8rem] -top-20 -left-6 bg-red-20 md:w-60 lg:w-[17rem] md:-top-32 lg:-top-[10rem] md:-left-[24%] lg:-left-[3rem]">
+											<div className=" ">
 												<img src={gold_medal} className="w-full h-full" />	
 											</div>
 											
-											<div className="mt-1 text-[.9rem] flex flex-col justify-center text-gray-50 font-bold lg:text-xl">
+											<div className="mt-1 md:mt-2 text-[.9rem] md:text-2xl flex flex-col justify-center text-gray-50 font-bold lg:text-xl">
 												<p>1st</p>
 												<p>Runner</p>
 												<p className="text-getlinkedai_fuchsia font-bold">N400,000</p>
@@ -552,11 +553,11 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 								<div className="bg-blue-40 relative w-[30%] h-[85%] bg-[rgba(212,52,254,0.12)] border border-getlinkedai_fuchsia rounded lg:h-52">
 									<div className="relative ">
 										<div className="absolute text-center w-full -top-12 left-0 bg-red-20 lg:w-44 lg:-top-20 lg:left-2">
-											<div className="">
+											<div className="relative md:w-40 md:left-[2%] md:-top-[2rem]">
 												<img src={bronze_medal} className="w-full h-full" />	
 											</div>
 											
-											<div className="mt-1 text-[.9rem] flex flex-col justify-center text-gray-50 font-bold lg:text-xl">
+											<div className="mt-1 md:-mt-[10%] text-[.9rem] md:text-2xl flex flex-col justify-center text-gray-50 font-bold lg:text-xl">
 												<p>3rd</p>
 												<p>Runner</p>
 												<p className="text-getlinkedai_fuchsia font-bold">N150,000</p>
@@ -577,38 +578,38 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 					</div>
 					<div className="relative z-10 w-[80%] mx-auto text-center pt-10 pb-28 bg-red-30">
 						<div>
-							<p className="text-xl font-bold text-gray-100 lg:font-extrabold lg:text-3xl">Partners and Sponsors</p>
+							<p className="text-xl font-bold text-gray-100 lg:font-extrabold md:text-3xl lg:text-3xl">Partners and Sponsors</p>
 							{/* <p className="text-getlinkedai_fuchsia font-semibold text-xl">Rewards</p> */}
-							<p className="text-gray-200 leading-5 mt-1 font-sans text-[.8rem] font-normal">Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
+							<p className="text-gray-200 leading-5 mt-1 md:mt-2 font-sans text-[.8rem] md:text-xl font-normal">Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
 						</div>
 
-						<div className="relative py-6 px-12 bg-[rgba(255, 255, 255, 0.01)] border border-getlinkedai_fuchsia mt-10 rounded lg:p-24">
+						<div className="relative py-6 md:py-0 bg-red-10 px-10 bg-[rgba(255, 255, 255, 0.01)] border lg:border-2 border-getlinkedai_fuchsia mt-10 md:h-56 lg:h-[50vh]  rounded">
 							<div className="absolute w-2 top-1 left-[5%]">
 								<img src={purple_star_3x} className="w-full h-full" />
 							</div>
 							<div className="absolute w-2 bottom-1 right-[10%]">
 								<img src={white_star_3x} className="w-full h-full" />
 							</div>
-							<div className="flex flex-col w-full bg-red-20 ">
+							<div className="flex flex-col w-full md:h-full bg-blue-20 md:pt-6 lg:pt-16 ">
 								{/* top row */}
-								<div className="flex flex-wrap justify-between bg-red-30 h-7 lg:h-20 lg:-mt-3">
+								<div className="flex flex-wrap justify-between bg-red-10 h-7 md:h-20 lg:h-32 lg:-mt-3">
 									<div className="relative w-[25%] h-full bg-red-30 lg:h-auto">
 										<div className="flex flex-wrap justify-center">
-											<div className="absolute bg-blue-40 h-full w-[60%] mx-auto">
+											<div className="absolute bg-blue-40 h-full md:h-[90%] md:top-1 w-[60%] mx-auto">
 												<img src={liberty} className="w-full h-full" />
 											</div>
 										</div>
 									</div>
-									<div className="relative w-[40%] h- border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
+									<div className="relative w-[40%] h- border-r-[.15rem] lg:border-r-[.3rem] lg:border-l-[.3rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
 										<div className="flex flex-wrap justify-center mt-3">
-											<div className="absolute bottom-3 bg-blue-40 w-[70%] mx-auto lg:bottom-7">
+											<div className="absolute bottom-3 bg-blue-40 w-[70%] md:bottom-7  mx-auto lg:bottom-12">
 												<img src={liberty_company} className="w-full h-full"  />
 											</div>
 										</div>
 									</div>
 									<div className="relative w-[25%] h-full bg-red-30 lg:h-auto">
 										<div className="flex flex-wrap justify-center">
-											<div className="absolute bg-blue-40 bottom-1 w-[60%] mx-auto lg:h-20">
+											<div className="absolute bg-blue-40 bottom-1 lg:bottom-2 w-[60%] mx-auto">
 												<img src={white_crown} className="w-full h-full" />
 											</div>
 										</div>
@@ -616,14 +617,14 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 								</div>
 								{/* middle row */}
 								<div className="flex flex-wrap justify-between h-4">
-									<div className="w-[27%] h-[16%] bg-getlinkedai_fuchsia mt-1"></div>
+									<div className="w-[27%] lg:h-[25%] h-[16%] bg-getlinkedai_fuchsia mt-1"></div>
 									<div className="w-[6%] rounded-full bg-red-40"></div>
-									<div className="w-[29%] h-[16%] bg-getlinkedai_fuchsia mt-1"></div>
+									<div className="w-[29%] h-[16%] lg:h-[25%] bg-getlinkedai_fuchsia mt-1"></div>
 									<div className="w-[6%] rounded-full bg-red-40"></div>
-									<div className="w-[27%] h-[16%] bg-getlinkedai_fuchsia mt-1"></div>
+									<div className="w-[27%] h-[16%] lg:h-[25%] bg-getlinkedai_fuchsia mt-1"></div>
 								</div>
 								{/* bottom row */}
-								<div className="flex flex-wrap justify-between bg-red-20 h-7 lg:h-20">
+								<div className="flex flex-wrap justify-between bg-red-20 h-7 md:h-20 lg:h-32">
 									<div className="relative w-[25%] h- bg-red-30">
 										<div className="flex flex-wrap justify-center">
 											<div className="absolute bg-blue-40 w-[60%] mx-auto mt-1 ml-2">
@@ -631,18 +632,18 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 											</div>
 										</div>
 									</div>
-									<div className="relative w-[40%] h- border-r-[.15rem] border-l-[.15rem] border-getlinkedai_fuchsia bg-red-30">
+									<div className="relative w-[40%] h- border-r-[.15rem] border-l-[.15rem] lg:border-r-[.3rem] lg:border-l-[.3rem] border-getlinkedai_fuchsia bg-red-30">
 										<div className="flex flex-wrap justify-center mt-3">
-											<div className="absolute top-0 bg-blue-40 w-[70%] mx-auto lg:-top-[8%]">
+											<div className="absolute bottom-0 bg-blue-40 w-[70%] md:bottom-2 mx-auto lg:bottom-0">
 												<img src={paybox} className="w-full h-full"  />
 											</div>
 										</div>
 									</div>
 									<div className="w-[25%] h- bg-red-30">
 										<div className="relative">
-											<div className="relative text-[.5rem] bg-blue-20 mt-1 lg:text-4xl lg:mt-3">
+											<div className="relative text-[.5rem] bg-blue-20 mt-1 md:text-2xl lg:text-5xl md:mt-4 lg:mt-8 ">
 												<span className="text-white">Vuzual</span><span className="text-red-600 ml-1 font-bold">Plus</span>
-												<div className="absolute -bottom-1 -right-0 text-[.2rem] text-gray-50 font-medium lg:text-base lg:-bottom-[60%]">
+												<div className="absolute -bottom-1 md:-bottom-2 -right-0 text-[.2rem] md:text-xs text-gray-50 font-medium lg:text-base lg:-bottom-[60%]">
 													<p>Design Studios</p>
 												</div>
 											</div>
@@ -660,7 +661,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 				<hr className="relative z-20 border-gray-400" />
 
 				{/* privacy policy */}
-				<div className="relative w-full bg-[rgba(20, 13, 39)]">
+				<div className="relative w-full bg-[rgba(20, 13, 39)] md:pb-40">
 					<div className="absolute right-0 -top-52">
 						<img src={right_purple_lens_flare} />
 					</div>
@@ -670,10 +671,10 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 								<div className="absolute w-3 right-[20%] -top-[15%]">
 									<img src={gray_star_3x} className="w-full h-full"/>
 								</div>
-								<p className="text-xl font-bold text-gray-100 lg:font-extrabold lg:text-3xl">Privacy Policy and</p>
-								<p className="text-getlinkedai_fuchsia font-bold text-xl lg:font-extrabold lg:text-3xl">Terms</p>
-								<p className="text-gray-300 leading-7 mt-1 font-sans text-[.9rem] font-normal">Last updated on September 12, 2023</p>
-								<p className="text-gray-200 leading-6 mt-7 font-sans text-[.9rem] font-normal">
+								<p className="text-xl font-bold text-gray-100 lg:font-extrabold md:text-3xl lg:text-3xl">Privacy Policy and</p>
+								<p className="text-getlinkedai_fuchsia font-bold text-xl lg:font-extrabold md:text-3xl lg:text-3xl">Terms</p>
+								<p className="text-gray-300 leading-7 mt-1 font-sans text-[.9rem] md:text-xl font-normal">Last updated on September 12, 2023</p>
+								<p className="text-gray-200 leading-6 mt-7 font-sans text-[.9rem] md:text-xl font-normal">
 									Below are our privacy & policy, which outline a lot of goodies. it’s our aim to always take of our participant
 								</p>
 							</div>
@@ -681,45 +682,45 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 								<div className="absolute -left-36 bottom-0">
 									<img src={left_purple_lens_flare} />
 								</div>
-								<div className="relative w-full mt-10 pt-8 pb-16 px-5 bg-[rgba(217,217,217,0.03)] border border-getlinkedai_fuchsia rounded-md lg:p-12">
+								<div className="relative w-full mt-10 pt-8 pb-16 px-5 md:px-10 bg-[rgba(217,217,217,0.03)] border border-getlinkedai_fuchsia rounded-md lg:p-12">
 									<div className="absolute w-4 -top-[5%] right-[6%]">
 										<img src={purple_star_3x} />
 									</div>
 									
-									<div className="">
-										<p className="text-center leading-7 text-gray-50 text-[.9rem] font-normal lg:text-left">
+									<div className="md:space-y-10">
+										<p className="text-center leading-7 md:leading-9 text-gray-50 text-[.9rem] md:text-xl font-normal lg:text-left">
 											At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect,
 											use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you 
 											consent to the practices described in this policy.
 										</p>
 
-										<div className="space-y-6 mt-8">
+										<div className="space-y-6 mt-8 md:space-y-10">
 											<div className="text-left font-bold text-gray-50 space-y-1">
-												<p className="text-getlinkedai_fuchsia text-[.9rem]">Licensing Policy</p>
-												<p className="text-gray-50 leading-6 text-[.9rem]">Here are terms of our Standard License:</p>
+												<p className="text-getlinkedai_fuchsia text-[.9rem] md:text-2xl">Licensing Policy</p>
+												<p className="text-gray-50 leading-6 text-[.9rem] md:text-xl">Here are terms of our Standard License:</p>
 											</div>
 
-											<ul className="space-y-5">
+											<ul className="space-y-5 md:space-y-7">
 												<li className="flex gap-1 lg:justify-start lg:gap-3">
-													<div className="w-2/5 mt-2 bg-red-20 lg:w-[15%]">
+													<div className="w-2/5 md:w-[10%] mt-2 bg-red-20 lg:w-[15%]">
 														< img src={check_terms} className="w-5 h-5" />
 													</div>
-													<p className="text-left text-gray-50 font-normal leading-6 text-[.9rem] lg:mt-1">
+													<p className="text-left text-gray-50 font-normal leading-6 text-[.9rem] md:text-xl lg:mt-1">
 														The Standard License grants you a non-exclusive right to navigate and register for our event
 													</p>
 												</li>
 												<li className="flex gap-1">
-													<div className="w-2/5 mt-2 bg-red-20 lg:w-[15%]">
+													<div className="w-2/5 md:w-[10%] mt-2 bg-red-20 lg:w-[15%]">
 														< img src={check_terms} className="w-5 h-5" />
 													</div>
-													<p className="text-left text-gray-50 font-normal leading-6 text-[.9rem] lg:mt-1">
+													<p className="text-left text-gray-50 font-normal leading-6 text-[.9rem] md:text-xl lg:mt-1">
 														You are licensed to use the item available at any free source sites, for your project developement
 													</p>
 												</li>
 											</ul>
 
 											<div className="relative w-2/3 mx-auto text-center bg-red-20">
-												<button className="w-2/3 h-10 rounded-md  bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 font-normal">Read More</button>
+												<button className="w-2/3 h-10 md:h-14 md:text-xl rounded-md  bg-gradient-to-r from-pink-500 to-getlinkedai_light_purple text-gray-50 font-normal">Read More</button>
 											</div>
 										</div>
 									</div>
@@ -731,7 +732,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 						</div>
 
 						<div className="relative text-center bg-red-10 mt-20 lg:w-[40%]">
-							<div className="absolute w-[80%] top-[5.2rem] right-[15%] bg-red-20 lg:w-full lg:top-[23%] lg:right-[10%]">
+							<div className="absolute w-[80%] top-[5.2rem] md:top-[30%] right-[15%] bg-red-20 lg:w-full lg:top-[23%] lg:right-[10%]">
 								<img src={man_lock} className="lg:w-full lg:h-full" />
 								<div className="absolute w-3 bottom-[15%] left-[15%]">
 									<img src={white_star_3x} className="w-full h-full" />
@@ -770,15 +771,15 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 
 					<div className="relative w-[80%] mx-auto text-left pt-10 pb-14 bg-red-30 lg:flex lg:flex-wrap lg:justify-between lg:pb-0">
 						<div className="lg:w-[40%] bg-blue-20">
-							<div className="font-bold text-2xl text-left lg:font-extrabold lg:text-3xl">
+							<div className="font-bold text-2xl text-left lg:font-extrabold md:text-4xl lg:text-3xl">
 								<span className="text-white">get</span><span className="text-getlinkedai_fuchsia">linked</span>
 							</div>
-							<p className="text-gray-50 text-[.9rem] font-normal mt-5 lg:text-[1rem] lg:font-normal lg:mt-3">
+							<p className="text-gray-50 text-[.9rem] md:text-lg font-normal mt-5 lg:text-[1rem] lg:font-normal lg:mt-3">
 							Getlinked Tech Hackathon is a technology innovation program established by a group 
 							of organizations with the aim of showcasing young and talented individuals in the field of technology
 							</p>
 
-							<div className="flex gap-3 bg-red-30 w-[80%] my-10 text-[.9rem] lg:mt-20 lg:my-0">
+							<div className="flex gap-3 bg-red-30 w-[80%] my-10 text-[.9rem] md:text-xl md:mt-16 lg:mt-20 lg:my-0">
 								<p className="text-gray-50 font-normal">Terms of Use</p>
 								<div className="w-[1%] bg-getlinkedai_fuchsia"></div>
 								<p className="text-gray-50 font-normal">Privacy Policy</p>
@@ -786,28 +787,39 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 						</div>
 						
 
-						<div className="relative lg:w-[50%] lg:flex lg:justify-between bg-yellow-20 lg:mt-[3%]">
+						<div className="relative lg:w-[50%] lg:flex lg:justify-between bg-yellow-20 md:mt-[10%] lg:mt-[3%]">
 							<div className=" bg-red-20 lg:bottom-0 lg:w-56">
 								<div className="space-y-3 lg:w-full bg-red-20">
-									<p className="text-getlinkedai_fuchsia font-semibold text-[1.1rem]">Useful Links</p>
-									<p className="text-white font-normal text-base">Overview</p>
-									<p className="text-white font-normal text-base">Timeline</p>
-									<p className="text-white font-normal text-base">FAQs</p>
-									<p className="text-white font-normal text-base">Register</p>
+									<p className="text-getlinkedai_fuchsia font-semibold text-[1.1rem] md:text-3xl">Useful Links</p>
+									<div className="text-white font-normal text-base md:text-2xl space-y-1 md:space-y-3">
+										<p className="hover:text-pink-500">
+											<button onClick={() => handleSideBarScroll("Overview")}>Overview</button>
+										</p>
+										<p className="hover:text-pink-500">
+											<button onClick={() => handleSideBarScroll("Timeline")}>Timeline</button>
+										</p>
+										<p className="hover:text-pink-500">
+											<button onClick={() => handleSideBarScroll("FAQs")}>FAQs</button>
+										</p>
+										<p className="hover:text-pink-500">
+											<button onClick={() => navigate("/register")}>Register</button>
+										</p>
+									</div>
+									
 
 									<div className="relative flex bg-red-20 gap-3 mb-20">
-										<p className=" text-base text-getlinkedai_fuchsia font-semibold mt-2">Follow us</p>
-										<div className="flex gap-3 bg-red-20 mt-1 ml-4">
-											<div className="w-7 h-7">
+										<p className=" text-base md:text-2xl text-getlinkedai_fuchsia font-semibold mt-2">Follow us</p>
+										<div className="flex gap-3 bg-red-20 mt-1 md:mt-0 ml-4">
+											<div className="w-7 h-7 md:h-10 md:w-10">
 												<img src={instagram} className="w-full h-full"/>
 											</div>
-											<div className="w-5 h-5 mt-1">
+											<div className="w-5 h-5  md:h-8 md:w-8 mt-1">
 												<img src={twitter} className="w-full h-full" />
 											</div>
-											<div className="w-3 h-6">
+											<div className="w-3 h-6  md:h-9 md:w-6">
 												<img src={facebook} className="w-full h-full" />
 											</div>
-											<div className="w-7 h-7">
+											<div className="w-7 h-7  md:h-10 md:w-10">
 												<img src={linked_in} className="w-full h-full" />
 											</div>
 										</div>
@@ -818,19 +830,19 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 
 							<div className=" bg-red-20 lg:w-52 lg:right-0 lg:top-0">
 								<div className="relative mt-20 bg-red-40 lg:w-full lg:mt-0">
-									<p className="text-getlinkedai_fuchsia font-semibold text-[1.1rem]">Contact Us</p>
+									<p className="text-getlinkedai_fuchsia font-semibold text-[1.1rem] md:text-2xl">Contact Us</p>
 									<ul className="space-y-4 mt-2">
 										<li className="flex gap-5">
-											<div className="w-4 h-4 mt-1">
+											<div className="w-4 h-4 md:w-5 md:h-5 mt-1">
 												<img src={call} className="w-full h-full" />
 											</div>
-											<p className="text-left text-white font-normal text-[.9rem]">+234  6707653444</p>
+											<p className="text-left text-white font-normal text-[.9rem] md:text-xl">+234  6707653444</p>
 										</li>
 										<li className="flex gap-5">
-											<div className="w-4 h-4 mt-1">
+											<div className="w-4 h-4 md:w-5 md:h-5 mt-1">
 												<img src={location} className="w-full h-full" />
 											</div>
-											<div className="text-left text-white font-normal text-[.9rem]">
+											<div className="text-left text-white font-normal text-[.9rem] md:text-xl">
 												<p>27, Alara Street</p>
 												<p>Yaba 100012</p>
 												<p>Lagos State</p>
@@ -843,7 +855,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 						</div>
 						
 
-						<p className="text-gray-50 font-sm text-center mt-16 font-normal text-sm lg:w-full lg:text-xl">All rights reserved. © getlinked Ltd.</p>
+						<p className="text-gray-50 font-sm text-center mt-16 font-normal text-sm md:text-xl lg:w-full lg:text-xl">All rights reserved. © getlinked Ltd.</p>
 
 					</div>
 				</div>

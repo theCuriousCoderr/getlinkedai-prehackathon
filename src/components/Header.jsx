@@ -17,16 +17,16 @@ function Header({setSideNav, handleSideBarScroll}) {
     }
   return (
     <>
-        <header className="bg-getlinkedai_bg px-10 py-5 align-middle flex justify-between border-b border-gray-800 lg:px-20 lg:py-10 lg:hidden">
+        <header className="bg-getlinkedai_bg px-10 md:px-14 py-5 align-middle flex justify-between border-b border-gray-800 lg:px-20 lg:py-10 lg:hidden">
             <div>
                 <NavLink to="/">
-                    <span className="text-white text-[15px] font-bold font-['Clash Display'] lg:text-3xl">get</span>
-                    <span className="text-fuchsia-500 text-[15px] font-bold font-['Clash Display'] lg:text-3xl">linked</span>
+                    <span className="text-white text-[15px] font-bold font-['Clash Display'] md:text-3xl lg:text-3xl">get</span>
+                    <span className="text-fuchsia-500 text-[15px] font-bold font-['Clash Display'] md:text-3xl lg:text-3xl">linked</span>
                 </NavLink>
                 
             </div>
-            <div className="lg:hidden bg-red-20 relative z-10 cursor">
-                <button onClick={()=> setSideNav(true)} className='w-full h-full'><img src={stair_hamburger}/></button>
+            <div className="h-4 w-4 md:h-6 md:w-6 md:mt-2 lg:hidden bg-red-20 relative z-10 cursor">
+                <button onClick={()=> setSideNav(true)} className='w-full h-full'><img src={stair_hamburger} className='w-full h-full'/></button>
             </div>
         </header>
         <header className="hidden z-30 bg-getlinkedai_bg px-10 py-7 align-middle lg:flex justify-between border-b border-gray-800
