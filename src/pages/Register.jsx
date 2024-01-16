@@ -38,43 +38,50 @@ function Register({sideNav, setSideNav, handleSideBarScroll}) {
     }
 
     useEffect(()=>{
-        // window.scrollTo(0,0);
-        fetch("https://backend.getlinked.ai/hackathon/categories-list")
-        .then(res => res.json()).
-        then(data => setCategoryList(data))
+        window.scrollTo(0,0);
+        fetch("https://backend.getlinked.ai/hackathon/categories-list").then(
+            // if fulfilled
+            res => res.json()
+        ).then(data => setCategoryList(data)).catch(
+            error => alert(`${error}\n\nError in sending request.\nThis is possibly due to a error in the server or an interruption in your network connection.\nBear with us and try again later.`)
+        )
     },[success])
 
    
 
     async function handleSubmit(e) {
         e.preventDefault();
-        let postRegisterData = {...registerData};
-        let value;
-        for (let items in postRegisterData) {
-            if (items === "group_size"){
-                value = parseInt(postRegisterData.group_size)
-                postRegisterData = ({...postRegisterData, [items]: value });
+        try {
+            let postRegisterData = {...registerData};
+            let value;
+            for (let items in postRegisterData) {
+                if (items === "group_size"){
+                    value = parseInt(postRegisterData.group_size)
+                    postRegisterData = ({...postRegisterData, [items]: value });
+                }
+                if (items === "category") {
+                    value = categoryList.filter(data => data.name === postRegisterData.category);
+                    value = value[0].id
+                    postRegisterData = ({...postRegisterData,[items]: value });
+                }
             }
-            if (items === "category") {
-                value = categoryList.filter(data => data.name === postRegisterData.category);
-                value = value[0].id;
-                postRegisterData = ({...postRegisterData,[items]: value });
-            }
+            let response = await fetch("https://backend.getlinked.ai/hackathon/registration", {
+                method: "POST",
+                headers: {'Content-Type' : 'application/json'},
+                body: JSON.stringify(postRegisterData)
+            });
+            let data = await response.json();
+            if (data.id) {
+                alert(`REGISTRATION SUCCESSFUL.\n Your Registration Id Number is ${data.id}. `);
+                setSuccess(true);
+            } else {
+                alert(data.email[0].toUpperCase())
+            } 
+        } catch(error)  {
+            alert(`Error in sending request.\nThis is possibly due to a error in the server or an interruption in your network connection.\nBear with us and try again later.`);
         }
-        let response = await fetch("https://backend.getlinked.ai/hackathon/registration", {
-            method: "POST",
-            headers: {'Content-Type' : 'application/json'},
-            body: JSON.stringify(postRegisterData)
-        })
-        let data = await response.json();
-        if (data.id) {
-            alert(`REGISTRATION SUCCESSFUL.\n Your Registration Id Number is ${data.id}. `);
-            setSuccess(true);
-        } else {
-            alert(data.email[0].toUpperCase())
-        }
-        
     }
+
     
 
   return (
@@ -189,7 +196,7 @@ function Register({sideNav, setSideNav, handleSideBarScroll}) {
                                 </div>
                                 <div className='space-y-1 md:space-y-3 lg:w-[48%]'>
                                     <label htmlFor='phone_number' className='text-white md:text-xl'>Phone</label>
-                                    <input required type="text" name="phone_number" value={registerData.phone_number} onChange={handleChange} placeholder='Enter your phone number' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 md:h-16 md:text-2xl p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem] md:placeholder:text-xl' />
+                                    <input required type="text" maxLength={11} name="phone_number" value={registerData.phone_number} onChange={handleChange} placeholder='Enter your phone number' className='w-full bg-[rgba(255,255,255,0.03)] border border-white rounded h-10 md:h-16 md:text-2xl p-5 font-normal text-gray-50 placeholder:text-slate-500 placeholder:text-[.9rem] md:placeholder:text-xl' />
                                 </div>
                             </div>
 

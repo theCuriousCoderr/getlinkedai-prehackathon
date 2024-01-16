@@ -107,7 +107,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 					{/* <div className="relative"> */}
 					<div className="relative w-full mx-auto bg-red-20">
 						<div className="relative w-[17rem] mx-auto bg-red-30 md:w-[28rem] lg:w-full">
-							<p className="bg-red-20  text-white text-center text-[.9rem] md:text-2xl font-bold italic lg:text-[2rem] lg:px-14 lg:text-right">Igniting a Revolution in HR Innovation</p>
+							<p className="bg-red-20  text-white text-center text-[.9rem] md:text-2xl font-bold italic lg:text-[2rem] lg:px-14 lg:text-right xl:text-red-500">Igniting a Revolution in HR Innovation</p>
 							<div className="absolute right-[3%] top-6 w-24 md:w-36 md:top-8 lg:w-40 lg:top-11 lg:right-14">
 								<img src={purple_strand} className="w-full" />
 							</div>
@@ -213,7 +213,7 @@ function Home({sideNav, setSideNav, handleSideBarScroll}) {
 
 					{/* vr man */}
 					<div className="relative bg-getlinkedai_bg mt-8 lg:w-1/2 ">
-						<div className="absolute -top-3 left-[3%] md:left-[1%] w-[20rem] h-[20rem] md:w-full md:h-full  bg-red-20 lg:w-[33rem] lg:h-[33rem] lg:left-[4%]">
+						<div className=" absolute -top-3 left-[3%] md:left-[1%] w-[20rem] h-[20rem] md:w-full md:h-full  bg-red-20 lg:w-[33rem] lg:h-[33rem] lg:left-[4%]">
 							<img src={sparkle_ball} className="w-full h-full" />
 						</div>
 						<div className="bg-red-20 w-full h-full"> 
